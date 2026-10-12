@@ -59,7 +59,7 @@ A PyQt6 desktop app that saves TVer episodes, and YouTube videos, through yt-dlp
 
 <b>Stack</b>&nbsp; `Python` `PyQt6` `yt-dlp` `FFmpeg` `NVENC`<br>
 <b>Distribution</b>&nbsp; Freeware · Windows 10/11 x64 · source not published<br>
-<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img align="absmiddle" src="https://img.shields.io/github/v/release/deuxdoom/TVerDownloader?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="TVer Downloader latest stable release"></a>
+<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img align="absmiddle" src="assets/generated/release-tver-downloader.svg" alt="Latest stable release of TVer Downloader"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/TVerDownloader) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/TVerDownloader/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/TVerDownloader/)
 
@@ -82,7 +82,7 @@ Saves CHZZK VODs and clips, as well as YouTube, Instagram, TVer and other suppor
 
 <b>Stack</b>&nbsp; `Python` `PySide6` `yt-dlp` `FFmpeg` `NVENC`<br>
 <b>Distribution</b>&nbsp; Free for personal use · Windows 10/11 x64 · source not published<br>
-<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img align="absmiddle" src="https://img.shields.io/github/v/release/deuxdoom/ChzzkDownloader?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="ChzzkDownloader latest stable release"></a>
+<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img align="absmiddle" src="assets/generated/release-chzzk-downloader.svg" alt="Latest stable release of ChzzkDownloader"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/ChzzkDownloader) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/ChzzkDownloader/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/ChzzkDownloader/)
 
@@ -105,7 +105,7 @@ Shows NVIDIA ShadowPlay recording status in large type on a secondary monitor, a
 
 <b>Stack</b>&nbsp; `Python` `Tkinter` `PyInstaller` `Open-Meteo`<br>
 <b>Distribution</b>&nbsp; Freeware · Windows 10/11 · source not published<br>
-<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img align="absmiddle" src="https://img.shields.io/github/v/release/deuxdoom/Shadowplay-Notifier?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="ShadowPlay Notifier latest stable release"></a>
+<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img align="absmiddle" src="assets/generated/release-shadowplay-notifier.svg" alt="Latest stable release of ShadowPlay Notifier"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/Shadowplay-Notifier) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/Shadowplay-Notifier/)
 
@@ -128,7 +128,7 @@ Turns a moment from any video into an animated GIF sized for the built-in screen
 
 <b>Stack</b>&nbsp; `Python` `PySide6` `FFmpeg`<br>
 <b>Distribution</b>&nbsp; Freeware · Windows 10/11 x64 · source not published<br>
-<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img align="absmiddle" src="https://img.shields.io/github/v/release/deuxdoom/APEXGIFMAKER?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="APEX GIF MAKER latest stable release"></a>
+<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img align="absmiddle" src="assets/generated/release-apex-gif-maker.svg" alt="Latest stable release of APEX GIF MAKER"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/APEXGIFMAKER) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/APEXGIFMAKER/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/APEXGIFMAKER/)
 
@@ -151,7 +151,7 @@ Measures stick circularity and polling rate with the same methods as gamepad-tes
 
 <b>Stack</b>&nbsp; `Python` `PySide6` `C++20` `SDL3` `XInput` `HID`<br>
 <b>Distribution</b>&nbsp; Freeware · Windows 10/11 · source not published<br>
-<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img align="absmiddle" src="https://img.shields.io/github/v/release/deuxdoom/GamePadTester?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="GamePadTester latest stable release"></a>
+<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img align="absmiddle" src="assets/generated/release-gamepad-tester.svg" alt="Latest stable release of GamePadTester"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/GamePadTester) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/GamePadTester/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/GamePadTester/)
 
@@ -174,7 +174,7 @@ Enlarges photos, illustrations, transparent images and pixel art up to 8× on th
 
 <b>Stack</b>&nbsp; `C#` `.NET 8` `Windows Forms` `SkiaSharp` `Magick.NET` `Real-ESRGAN (ncnn / Vulkan)`<br>
 <b>Distribution</b>&nbsp; Free download · Windows 10/11 x64 · source not published<br>
-<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img align="absmiddle" src="https://img.shields.io/github/v/release/deuxdoom/ImageUpscaler?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="ImageUpscaler latest stable release"></a>
+<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img align="absmiddle" src="assets/generated/release-image-upscaler.svg" alt="Latest stable release of ImageUpscaler"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/ImageUpscaler) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/ImageUpscaler/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/ImageUpscaler/)
 
@@ -197,7 +197,7 @@ A lightweight tray app that shows Claude and Codex usage limits in real time. It
 
 <b>Stack</b>&nbsp; `Python` `pywebview` `pystray` `PyInstaller` `C#`<br>
 <b>Distribution</b>&nbsp; Open source (MIT) · fork of jens-duttke/usage-monitor-for-claude · Windows 10/11 x64<br>
-<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img align="absmiddle" src="https://img.shields.io/github/v/release/deuxdoom/usage-monitor-for-claude?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="AI Agents Usage Monitor latest stable release"></a>
+<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img align="absmiddle" src="assets/generated/release-ai-agents-usage-monitor.svg" alt="Latest stable release of AI Agents Usage Monitor"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/usage-monitor-for-claude) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/usage-monitor-for-claude/)
 
@@ -217,7 +217,7 @@ Technologies that ship in the releases above, grouped by area. The numbers refer
 | **Desktop & runtime** | ![PySide6](https://img.shields.io/badge/PySide6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![PyQt6](https://img.shields.io/badge/PyQt6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![Tkinter](https://img.shields.io/badge/Tkinter-172440?style=flat-square) ![Windows Forms](https://img.shields.io/badge/Windows_Forms-172440?style=flat-square) ![pywebview](https://img.shields.io/badge/pywebview-172440?style=flat-square) ![.NET 8](https://img.shields.io/badge/.NET_8-172440?style=flat-square&logo=dotnet&logoColor=65D6E6) ![PyInstaller](https://img.shields.io/badge/PyInstaller-172440?style=flat-square)<br><sub>PySide6 02, 04, 05 · PyQt6 01 · Tkinter 03 · Windows Forms on .NET 8 06 · pywebview and pystray 07 · single-EXE builds with PyInstaller 03, 07</sub> |
 | **Media & imaging** | ![FFmpeg](https://img.shields.io/badge/FFmpeg-172440?style=flat-square&logo=ffmpeg&logoColor=65D6E6) ![yt-dlp](https://img.shields.io/badge/yt--dlp-172440?style=flat-square) ![NVIDIA NVENC](https://img.shields.io/badge/NVIDIA_NVENC-172440?style=flat-square&logo=nvidia&logoColor=65D6E6) ![Real-ESRGAN](https://img.shields.io/badge/Real--ESRGAN-172440?style=flat-square) ![Vulkan](https://img.shields.io/badge/Vulkan-172440?style=flat-square&logo=vulkan&logoColor=65D6E6) ![SkiaSharp](https://img.shields.io/badge/SkiaSharp-172440?style=flat-square) ![Magick.NET](https://img.shields.io/badge/Magick.NET-172440?style=flat-square)<br><sub>FFmpeg 01, 02, 04 · yt-dlp 01, 02 · NVENC hardware encoding 01, 02 · Real-ESRGAN through ncnn / Vulkan, SkiaSharp and Magick.NET 06</sub> |
 | **Input & hardware** | ![SDL3](https://img.shields.io/badge/SDL3-172440?style=flat-square) ![XInput](https://img.shields.io/badge/XInput-172440?style=flat-square) ![Raw HID](https://img.shields.io/badge/Raw_HID-172440?style=flat-square)<br><sub>Controller input, polling-rate timing and haptics in 05</sub> |
-| **Delivery & workflow** | ![Git](https://img.shields.io/badge/Git-172440?style=flat-square&logo=git&logoColor=65D6E6) ![GitHub Releases](https://img.shields.io/badge/GitHub_Releases-172440?style=flat-square&logo=github&logoColor=65D6E6) ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-172440?style=flat-square&logo=githubpages&logoColor=65D6E6) ![VS Code](https://img.shields.io/badge/VS_Code-172440?style=flat-square)<br><sub>Every app ships through GitHub Releases with a GitHub Pages site and an in-app updater</sub> |
+| **Delivery & workflow** | ![Git](https://img.shields.io/badge/Git-172440?style=flat-square&logo=git&logoColor=65D6E6) ![GitHub Releases](https://img.shields.io/badge/GitHub_Releases-172440?style=flat-square&logo=github&logoColor=65D6E6) ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-172440?style=flat-square&logo=githubpages&logoColor=65D6E6) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-172440?style=flat-square&logo=githubactions&logoColor=65D6E6) ![VS Code](https://img.shields.io/badge/VS_Code-172440?style=flat-square)<br><sub>Every app ships through GitHub Releases with a GitHub Pages site and an in-app updater · GitHub Actions refreshes the data on this profile</sub> |
 
 <a id="insights"></a>
 
@@ -227,23 +227,23 @@ Technologies that ship in the releases above, grouped by area. The numbers refer
   <img src="assets/generated/insights.svg" width="760" alt="Release insights from public GitHub data: releases published, release downloads, first and latest release, and releases per month for the last 12 months, stacked by project">
 </p>
 
-<sub>Snapshot of public GitHub REST API data as of the date shown in the graphic. Download counts cover GitHub Release assets only.</sub>
+<sub>Generated from the public GitHub REST API by a scheduled workflow (<a href=".github/workflows/refresh-data.yml">refresh-data.yml</a>). Download counts cover GitHub Release assets only.</sub>
 
 <a id="releases"></a>
 
 ## 06 · Latest Software Releases
 
-| Project | Latest stable release |
+| Project | Latest stable release · date (UTC) |
 |:--|:--|
-| **01 · [TVer Downloader](https://github.com/deuxdoom/TVerDownloader)**<br><sub>[Download ↓](https://github.com/deuxdoom/TVerDownloader/releases/latest)</sub> | <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="https://img.shields.io/github/v/release/deuxdoom/TVerDownloader?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="TVer Downloader latest stable release"></a><br><a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="https://img.shields.io/github/release-date/deuxdoom/TVerDownloader?display_date=published_at&style=flat-square&label=released&labelColor=1D2A45&color=172440" alt="TVer Downloader release date"></a> |
-| **02 · [ChzzkDownloader](https://github.com/deuxdoom/ChzzkDownloader)**<br><sub>[Download ↓](https://github.com/deuxdoom/ChzzkDownloader/releases/latest)</sub> | <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="https://img.shields.io/github/v/release/deuxdoom/ChzzkDownloader?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="ChzzkDownloader latest stable release"></a><br><a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="https://img.shields.io/github/release-date/deuxdoom/ChzzkDownloader?display_date=published_at&style=flat-square&label=released&labelColor=1D2A45&color=172440" alt="ChzzkDownloader release date"></a> |
-| **03 · [ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)**<br><sub>[Download ↓](https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest)</sub> | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="https://img.shields.io/github/v/release/deuxdoom/Shadowplay-Notifier?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="ShadowPlay Notifier latest stable release"></a><br><a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="https://img.shields.io/github/release-date/deuxdoom/Shadowplay-Notifier?display_date=published_at&style=flat-square&label=released&labelColor=1D2A45&color=172440" alt="ShadowPlay Notifier release date"></a> |
-| **04 · [APEX GIF MAKER](https://github.com/deuxdoom/APEXGIFMAKER)**<br><sub>[Download ↓](https://github.com/deuxdoom/APEXGIFMAKER/releases/latest)</sub> | <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="https://img.shields.io/github/v/release/deuxdoom/APEXGIFMAKER?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="APEX GIF MAKER latest stable release"></a><br><a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="https://img.shields.io/github/release-date/deuxdoom/APEXGIFMAKER?display_date=published_at&style=flat-square&label=released&labelColor=1D2A45&color=172440" alt="APEX GIF MAKER release date"></a> |
-| **05 · [GamePadTester](https://github.com/deuxdoom/GamePadTester)**<br><sub>[Download ↓](https://github.com/deuxdoom/GamePadTester/releases/latest)</sub> | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="https://img.shields.io/github/v/release/deuxdoom/GamePadTester?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="GamePadTester latest stable release"></a><br><a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="https://img.shields.io/github/release-date/deuxdoom/GamePadTester?display_date=published_at&style=flat-square&label=released&labelColor=1D2A45&color=172440" alt="GamePadTester release date"></a> |
-| **06 · [ImageUpscaler](https://github.com/deuxdoom/ImageUpscaler)**<br><sub>[Download ↓](https://github.com/deuxdoom/ImageUpscaler/releases/latest)</sub> | <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="https://img.shields.io/github/v/release/deuxdoom/ImageUpscaler?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="ImageUpscaler latest stable release"></a><br><a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="https://img.shields.io/github/release-date/deuxdoom/ImageUpscaler?display_date=published_at&style=flat-square&label=released&labelColor=1D2A45&color=172440" alt="ImageUpscaler release date"></a> |
-| **07 · [AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)**<br><sub>[Download ↓](https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest)</sub> | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="https://img.shields.io/github/v/release/deuxdoom/usage-monitor-for-claude?style=flat-square&label=stable&labelColor=47C9A2&color=172440" alt="AI Agents Usage Monitor latest stable release"></a><br><a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="https://img.shields.io/github/release-date/deuxdoom/usage-monitor-for-claude?display_date=published_at&style=flat-square&label=released&labelColor=1D2A45&color=172440" alt="AI Agents Usage Monitor release date"></a> |
+| **01 · [TVer Downloader](https://github.com/deuxdoom/TVerDownloader)**<br><sub>[Download ↓](https://github.com/deuxdoom/TVerDownloader/releases/latest)</sub> | <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/release-tver-downloader.svg" alt="TVer Downloader latest release"></a> |
+| **02 · [ChzzkDownloader](https://github.com/deuxdoom/ChzzkDownloader)**<br><sub>[Download ↓](https://github.com/deuxdoom/ChzzkDownloader/releases/latest)</sub> | <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/release-chzzk-downloader.svg" alt="ChzzkDownloader latest release"></a> |
+| **03 · [ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)**<br><sub>[Download ↓](https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest)</sub> | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier latest release"></a> |
+| **04 · [APEX GIF MAKER](https://github.com/deuxdoom/APEXGIFMAKER)**<br><sub>[Download ↓](https://github.com/deuxdoom/APEXGIFMAKER/releases/latest)</sub> | <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/release-apex-gif-maker.svg" alt="APEX GIF MAKER latest release"></a> |
+| **05 · [GamePadTester](https://github.com/deuxdoom/GamePadTester)**<br><sub>[Download ↓](https://github.com/deuxdoom/GamePadTester/releases/latest)</sub> | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester latest release"></a> |
+| **06 · [ImageUpscaler](https://github.com/deuxdoom/ImageUpscaler)**<br><sub>[Download ↓](https://github.com/deuxdoom/ImageUpscaler/releases/latest)</sub> | <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/release-image-upscaler.svg" alt="ImageUpscaler latest release"></a> |
+| **07 · [AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)**<br><sub>[Download ↓](https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest)</sub> | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor latest release"></a> |
 
-<sub>Live shields.io badges read from each repository's GitHub Releases: the newest published release that is not a draft or pre-release. Pre-releases are excluded, and a project without a release shows “no releases”.</sub>
+<sub>Read from each repository's GitHub Releases: the newest published release that is not a draft or pre-release. A newer pre-release, if one exists, appears as an extra segment, and a project without a release shows “No published release”. Refreshed every six hours.</sub>
 
 <a id="connect"></a>
 

@@ -71,5 +71,5 @@
   <text x="224.0" y="468" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#B9C8DF"><tspan font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" fill="#7D8FB3">06</tspan> ImageUpscaler</text>
   <rect x="380.0" y="458" width="10" height="10" rx="2" fill="#F59E5B"/>
   <text x="398.0" y="468" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#B9C8DF"><tspan font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" fill="#7D8FB3">07</tspan> AI Agents Usage Monitor</text>
-  <text x="32" y="498" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" fill="#5D6F93">Source: public GitHub REST API · drafts excluded · snapshot</text>
+  <text x="32" y="498" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" fill="#5D6F93">Source: public GitHub REST API · drafts excluded · refreshed by GitHub Actions</text>
 </svg>
