@@ -1,100 +1,130 @@
-
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="320" viewBox="0 0 1200 320"
-     role="img" aria-label="DEUXDOOM Developer Portfolio">
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">DEUXDOOM — Independent Software Engineering</title>
+  <desc id="hero-desc">Desktop Applications / Automation / Developer Utilities. Practical software. Thoughtful engineering.</desc>
+  <style>
+    .sans { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+    .mono { font-family: "Cascadia Mono", Consolas, "SF Mono", Menlo, "DejaVu Sans Mono", monospace; }
+    .anim { transform-box: view-box; }
+    .pulse { animation: pulse 4.8s ease-in-out infinite; }
+    .pulse.d2 { animation-delay: 1.6s; }
+    .pulse.d3 { animation-delay: 3.2s; }
+    .orbit { transform-origin: 1000px 172px; animation: spin 120s linear infinite; }
+    .orbit.rev { animation-duration: 180s; animation-direction: reverse; }
+    .flow { stroke-dasharray: 18 460; animation: flow 7s linear infinite; }
+    .flow.d2 { animation-delay: 2.4s; }
+    .flow.d3 { animation-delay: 4.6s; }
+    .load { transform-origin: 940px 220px; animation: load 9s ease-in-out infinite; }
+    .glow { animation: glow 10s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes flow { from { stroke-dashoffset: 478; } to { stroke-dashoffset: 0; } }
+    @keyframes load { 0%, 100% { transform: scaleX(.42); } 55% { transform: scaleX(1); } }
+    @keyframes glow { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0B1020"/>
-      <stop offset="55%" stop-color="#172440"/>
-      <stop offset="100%" stop-color="#131D35"/>
+    <clipPath id="frame"><rect width="1200" height="340" rx="24"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#0F1832"/>
     </linearGradient>
-
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#65D6E6"/>
-      <stop offset="100%" stop-color="#A78BFA"/>
-    </linearGradient>
-
-    <pattern id="grid" width="40" height="40"
-             patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40"
-            fill="none" stroke="#FFFFFF"
-            stroke-opacity=".055" stroke-width="1"/>
+    <radialGradient id="glow-cyan" cx="1000" cy="60" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#65D6E6" stop-opacity=".20"/>
+      <stop offset="1" stop-color="#65D6E6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-violet" cx="180" cy="400" r="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#263451" stroke-width="1"/>
     </pattern>
-
-    <clipPath id="rounded">
-      <rect width="1200" height="320" rx="22"/>
-    </clipPath>
+    <linearGradient id="grid-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset=".30" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".70" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".8"/>
+    </linearGradient>
+    <mask id="grid-mask"><rect width="1200" height="340" fill="url(#grid-fade)"/></mask>
+    <linearGradient id="title" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D3DFF2"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#65D6E6"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
   </defs>
 
-  <g clip-path="url(#rounded)">
-    <rect width="1200" height="320" fill="url(#background)"/>
-    <rect width="1200" height="320" fill="url(#grid)"/>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#grid)" mask="url(#grid-mask)" opacity=".7"/>
+    <rect class="glow" width="1200" height="340" fill="url(#glow-cyan)"/>
+    <rect width="1200" height="340" fill="url(#glow-violet)"/>
 
-    <!-- Geometric illustration -->
-    <circle cx="1020" cy="155" r="164"
-            fill="none" stroke="#65D6E6"
-            stroke-opacity=".15" stroke-width="1.5"/>
-    <circle cx="1020" cy="155" r="120"
-            fill="none" stroke="#A78BFA"
-            stroke-opacity=".20" stroke-width="1.5"/>
-    <circle cx="1020" cy="155" r="74"
-            fill="none" stroke="#65D6E6"
-            stroke-opacity=".35" stroke-width="2"/>
+    <!-- orbit rings -->
+    <circle cx="1000" cy="172" r="96" fill="none" stroke="#2E3F63" stroke-width="1"/>
+    <circle class="anim orbit" cx="1000" cy="172" r="132" fill="none" stroke="#65D6E6" stroke-opacity=".35" stroke-width="1.2" stroke-dasharray="2 10"/>
+    <circle class="anim orbit rev" cx="1000" cy="172" r="168" fill="none" stroke="#A78BFA" stroke-opacity=".22" stroke-width="1" stroke-dasharray="44 18 4 18"/>
 
-    <path d="M952 155H1088M1020 87V223"
-          stroke="#65D6E6" stroke-opacity=".4"/>
-    <circle cx="1020" cy="155" r="9" fill="#65D6E6"/>
-
-    <!-- Brand label -->
-    <rect x="54" y="50" width="5" height="22"
-          rx="2" fill="#65D6E6"/>
-
-    <text x="74" y="67" fill="#65D6E6"
-          font-family="Segoe UI, Arial, sans-serif"
-          font-size="16" font-weight="600"
-          letter-spacing="3">
-      INDEPENDENT SOFTWARE PROJECTS
-    </text>
-
-    <!-- Main title -->
-    <text x="54" y="158" fill="#F0F4FA"
-          font-family="Segoe UI, Arial, sans-serif"
-          font-size="80" font-weight="750"
-          letter-spacing="-2">
-      DEUXDOOM
-    </text>
-
-    <text x="58" y="201" fill="#B9C8DF"
-          font-family="Segoe UI, Arial, sans-serif"
-          font-size="24">
-      Practical software. Thoughtful details.
-    </text>
-
-    <!-- Accent line -->
-    <rect x="58" y="224" width="520"
-          height="2" fill="url(#accent)" opacity=".65"/>
-
-    <!-- Expertise -->
-    <g font-family="Segoe UI, Arial, sans-serif"
-       font-size="15" font-weight="600">
-
-      <rect x="58" y="245" width="116" height="35"
-            rx="9" fill="#263451"/>
-      <text x="79" y="268" fill="#65D6E6">WINDOWS</text>
-
-      <rect x="185" y="245" width="112" height="35"
-            rx="9" fill="#263451"/>
-      <text x="206" y="268" fill="#C5B3FF">AI TOOLS</text>
-
-      <rect x="308" y="245" width="112" height="35"
-            rx="9" fill="#263451"/>
-      <text x="329" y="268" fill="#E0E8F5">MEDIA</text>
-
-      <rect x="431" y="245" width="115" height="35"
-            rx="9" fill="#263451"/>
-      <text x="450" y="268" fill="#E0E8F5">GAMING</text>
+    <!-- circuit traces -->
+    <g fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M926 236H884V292H782" stroke="#2E3F63"/>
+      <path d="M902 84V46H1058" stroke="#2E3F63"/>
+      <path d="M1136 204H1164V118H1110" stroke="#2E3F63"/>
+      <path class="flow" d="M926 236H884V292H782" stroke="#65D6E6"/>
+      <path class="flow d2" d="M902 84V46H1058" stroke="#A78BFA"/>
+      <path class="flow d3" d="M1136 204H1164V118H1110" stroke="#65D6E6"/>
     </g>
+
+    <!-- application panes -->
+    <rect x="862" y="84" width="214" height="134" rx="10" fill="#111A30" stroke="#2E3F63"/>
+    <rect x="894" y="114" width="214" height="134" rx="10" fill="#131D37" stroke="#A78BFA" stroke-opacity=".55"/>
+    <g>
+      <rect x="926" y="146" width="214" height="134" rx="10" fill="#172440" stroke="#65D6E6" stroke-opacity=".85"/>
+      <path d="M926 168H1140" stroke="#2E3F63"/>
+      <circle cx="940" cy="157" r="3" fill="#65D6E6" fill-opacity=".9"/>
+      <circle cx="951" cy="157" r="3" fill="#A78BFA" fill-opacity=".8"/>
+      <circle cx="962" cy="157" r="3" fill="#2E3F63"/>
+      <rect x="940" y="182" width="116" height="6" rx="3" fill="#2E3F63"/>
+      <rect x="940" y="196" width="78" height="6" rx="3" fill="#263451"/>
+      <rect x="940" y="217" width="186" height="6" rx="3" fill="#22304D"/>
+      <rect class="anim load" x="940" y="217" width="186" height="6" rx="3" fill="#65D6E6"/>
+      <polyline points="940,264 962,256 982,259 1004,246 1026,250 1048,238 1070,242 1092,230 1126,234" fill="none" stroke="#47C9A2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".85"/>
+    </g>
+
+    <!-- nodes -->
+    <g fill="#0B1020" stroke-width="1.6">
+      <circle class="pulse" cx="782" cy="292" r="5" stroke="#65D6E6"/>
+      <circle class="pulse d2" cx="1058" cy="46" r="5" stroke="#A78BFA"/>
+      <circle class="pulse d3" cx="1110" cy="118" r="5" stroke="#65D6E6"/>
+    </g>
+    <g class="mono" font-size="11" letter-spacing="2" fill="#7083A8">
+      <text x="796" y="284">SHIP</text>
+      <text x="1068" y="50">DESIGN</text>
+      <text x="1110" y="102" text-anchor="middle">BUILD</text>
+    </g>
+
+    <!-- ruler -->
+    <g stroke="#2E3F63" stroke-width="1">
+      <path d="M760 318H1168"/>
+      <path d="M760 318v-8M860 318v-8M960 318v-8M1060 318v-8M1160 318v-8"/>
+      <path d="M780 318v-4M800 318v-4M820 318v-4M840 318v-4M880 318v-4M900 318v-4M920 318v-4M940 318v-4M980 318v-4M1000 318v-4M1020 318v-4M1040 318v-4M1080 318v-4M1100 318v-4M1120 318v-4M1140 318v-4"/>
+    </g>
+
+    <!-- corner marks -->
+    <g fill="none" stroke="#65D6E6" stroke-opacity=".7" stroke-width="1.5">
+      <path d="M28 44V28H44"/>
+      <path d="M1172 296V312H1156"/>
+    </g>
+
+    <!-- identity -->
+    <rect x="64" y="79" width="11" height="11" fill="#65D6E6"/>
+    <text class="mono" x="88" y="90" font-size="17" letter-spacing="3.5" fill="#65D6E6">INDEPENDENT SOFTWARE ENGINEERING</text>
+    <text class="sans" x="58" y="178" font-size="92" font-weight="800" letter-spacing="5" fill="url(#title)">DEUXDOOM</text>
+    <rect x="64" y="204" width="64" height="2.5" rx="1.25" fill="url(#rule)"/>
+    <rect x="136" y="204.75" width="440" height="1" fill="#263451"/>
+    <text class="sans" x="64" y="248" font-size="26" font-weight="500" fill="#B9C8DF">Desktop Applications<tspan fill="#65D6E6" dx="10">/</tspan><tspan dx="10">Automation</tspan><tspan fill="#65D6E6" dx="10">/</tspan><tspan dx="10">Developer Utilities</tspan></text>
+    <text class="sans" x="64" y="294" font-size="22" fill="#F0F4FA">Practical software.<tspan fill="#C8B8FF" dx="7">Thoughtful engineering.</tspan></text>
   </g>
+  <rect x=".75" y=".75" width="1198.5" height="338.5" rx="23.5" fill="none" stroke="#263451" stroke-width="1.5"/>
 </svg>
-  

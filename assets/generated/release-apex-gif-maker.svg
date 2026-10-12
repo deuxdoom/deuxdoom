@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="171" height="24" viewBox="0 0 171 24" role="img" aria-label="APEX GIF MAKER: latest stable release v3.1.0, published 2026-09-29 (UTC)">
+  <title>APEX GIF MAKER: latest stable release v3.1.0, published 2026-09-29 (UTC)</title>
+  <clipPath id="r"><rect width="171" height="24" rx="6"/></clipPath>
+  <g clip-path="url(#r)" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12">
+    <rect x="0" width="78" height="24" fill="#1D2A45"/>
+    <circle cx="14" cy="12" r="4" fill="#47C9A2"/>
+    <text x="24" y="16.5" fill="#F0F4FA" font-weight="700">v3.1.0</text>
+    <rect x="78" width="93" height="24" fill="#131C33"/>
+    <text x="88" y="16.5" fill="#B9C8DF">2026-09-29</text>
+  </g>
+  <rect x=".5" y=".5" width="170" height="23" rx="5.5" fill="none" stroke="#2E3F63"/>
+</svg>

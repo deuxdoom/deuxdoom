@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="132" viewBox="0 0 1200 132" role="img" aria-labelledby="footer-title">
+  <title id="footer-title">DEUXDOOM — Practical software. Thoughtful engineering.</title>
+  <style>
+    .pulse { animation: pulse 4.8s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <defs>
+    <clipPath id="f-frame"><rect width="1200" height="132" rx="20"/></clipPath>
+    <linearGradient id="f-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0F1832"/>
+      <stop offset=".5" stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#0F1832"/>
+    </linearGradient>
+    <linearGradient id="f-rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#65D6E6" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#65D6E6"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="f-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#263451" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <g clip-path="url(#f-frame)">
+    <rect width="1200" height="132" fill="url(#f-bg)"/>
+    <rect width="1200" height="132" fill="url(#f-grid)" opacity=".35"/>
+    <rect x="300" y="0" width="600" height="2" fill="url(#f-rule)"/>
+    <g fill="none" stroke="#2E3F63" stroke-width="1.2">
+      <path d="M120 66H420"/>
+      <path d="M780 66H1080"/>
+    </g>
+    <circle class="pulse" cx="420" cy="66" r="4" fill="#0B1020" stroke="#65D6E6" stroke-width="1.6"/>
+    <circle class="pulse" cx="780" cy="66" r="4" fill="#0B1020" stroke="#A78BFA" stroke-width="1.6" style="animation-delay: 2.4s"/>
+    <text x="600" y="64" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="9" fill="#F0F4FA">DEUXDOOM</text>
+    <text x="600" y="94" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="14" letter-spacing="1.5" fill="#B9C8DF">Practical software. Thoughtful engineering.</text>
+  </g>
+  <rect x=".75" y=".75" width="1198.5" height="130.5" rx="19.5" fill="none" stroke="#263451" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-label="Release insights: 96 releases across 7 apps, 5,110 release downloads, data as of 2026-10-12 UTC">
+  <title>Release insights: 96 releases across 7 apps, 5,110 release downloads, data as of 2026-10-12 UTC</title>
+  <rect x=".75" y=".75" width="758.5" height="518.5" rx="18" fill="#0B1020" stroke="#263451" stroke-width="1.5"/>
+  <rect x="32" y="31" width="9" height="9" fill="#65D6E6"/>
+  <text x="50" y="40" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="15" letter-spacing="3" fill="#65D6E6">RELEASE INSIGHTS</text>
+  <text x="728" y="40" text-anchor="end" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3" data-as-of="2026-10-12">Data as of 2026-10-12 UTC</text>
+  <rect x="32.0" y="62" width="165.0" height="104" rx="12" fill="#121B33" stroke="#22304D"/>
+  <text x="48.0" y="106" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#F0F4FA">96</text>
+  <text x="48.0" y="133" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#B9C8DF" textLength="137" lengthAdjust="spacingAndGlyphs">Releases published</text>
+  <text x="48.0" y="153" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#7D8FB3">across 7 apps</text>
+  <rect x="209.0" y="62" width="165.0" height="104" rx="12" fill="#121B33" stroke="#22304D"/>
+  <text x="225.0" y="106" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#F0F4FA">5.1k</text>
+  <text x="225.0" y="133" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#B9C8DF" textLength="137" lengthAdjust="spacingAndGlyphs">Release downloads</text>
+  <text x="225.0" y="153" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#7D8FB3" textLength="137" lengthAdjust="spacingAndGlyphs">GitHub Release assets</text>
+  <rect x="386.0" y="62" width="165.0" height="104" rx="12" fill="#121B33" stroke="#22304D"/>
+  <text x="402.0" y="106" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#F0F4FA">Aug 2025</text>
+  <text x="402.0" y="133" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#B9C8DF">Shipping since</text>
+  <text x="402.0" y="153" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#7D8FB3" textLength="137" lengthAdjust="spacingAndGlyphs">first public release</text>
+  <rect x="563.0" y="62" width="165.0" height="104" rx="12" fill="#121B33" stroke="#22304D"/>
+  <text x="579.0" y="106" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#F0F4FA">Oct 11</text>
+  <text x="579.0" y="133" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#B9C8DF">Latest release</text>
+  <text x="579.0" y="153" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#7D8FB3" textLength="137" lengthAdjust="spacingAndGlyphs">ImageUpscaler v1.0.0</text>
+  <text x="32" y="210" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#F0F4FA">Releases per month</text>
+  <text x="728" y="210" text-anchor="end" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#7D8FB3">last 12 months · stacked by project</text>
+  <path d="M64 380.0H728" stroke="#1E2A45" stroke-width="1"/>
+  <text x="54" y="384.0" text-anchor="end" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">0</text>
+  <path d="M64 308.0H728" stroke="#1E2A45" stroke-width="1"/>
+  <text x="54" y="312.0" text-anchor="end" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">20</text>
+  <path d="M64 236.0H728" stroke="#1E2A45" stroke-width="1"/>
+  <text x="54" y="240.0" text-anchor="end" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">40</text>
+  <text x="91.7" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Nov</text>
+  <text x="91.7" y="415" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" fill="#5D6F93">2025</text>
+  <text x="147.0" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Dec</text>
+  <rect x="187.3" y="376.4" width="30.0" height="3.6" fill="#65D6E6"/>
+  <text x="202.3" y="369.4" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#B9C8DF">1</text>
+  <text x="202.3" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Jan</text>
+  <text x="202.3" y="415" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" fill="#5D6F93">2026</text>
+  <text x="257.7" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Feb</text>
+  <text x="313.0" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Mar</text>
+  <text x="368.3" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Apr</text>
+  <text x="423.7" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">May</text>
+  <text x="479.0" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Jun</text>
+  <text x="534.3" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Jul</text>
+  <rect x="574.7" y="351.2" width="30.0" height="28.8" fill="#65D6E6"/>
+  <rect x="574.7" y="333.2" width="30.0" height="18.0" fill="#F59E5B"/>
+  <text x="589.7" y="326.2" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#B9C8DF">13</text>
+  <text x="589.7" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Aug</text>
+  <rect x="630.0" y="354.8" width="30.0" height="25.2" fill="#65D6E6"/>
+  <rect x="630.0" y="311.6" width="30.0" height="43.2" fill="#F2626B"/>
+  <rect x="630.0" y="304.4" width="30.0" height="7.2" fill="#A78BFA"/>
+  <rect x="630.0" y="264.8" width="30.0" height="39.6" fill="#F59E5B"/>
+  <text x="645.0" y="257.8" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#B9C8DF">32</text>
+  <text x="645.0" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Sep</text>
+  <rect x="685.3" y="372.8" width="30.0" height="7.2" fill="#65D6E6"/>
+  <rect x="685.3" y="358.4" width="30.0" height="14.4" fill="#47C9A2"/>
+  <rect x="685.3" y="347.6" width="30.0" height="10.8" fill="#5B9DF5"/>
+  <rect x="685.3" y="344.0" width="30.0" height="3.6" fill="#C084FC"/>
+  <text x="700.3" y="337.0" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#B9C8DF">10</text>
+  <text x="700.3" y="400" text-anchor="middle" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3">Oct</text>
+  <rect x="32.0" y="434" width="10" height="10" rx="2" fill="#65D6E6"/>
+  <text x="50.0" y="444" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#B9C8DF"><tspan font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" fill="#7D8FB3">01</tspan> TVer Downloader</text>
+  <rect x="206.0" y="434" width="10" height="10" rx="2" fill="#47C9A2"/>
+  <text x="224.0" y="444" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#B9C8DF"><tspan font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" fill="#7D8FB3">02</tspan> ChzzkDownloader</text>
+  <rect x="380.0" y="434" width="10" height="10" rx="2" fill="#F2626B"/>
+  <text x="398.0" y="444" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#B9C8DF"><tspan font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" fill="#7D8FB3">03</tspan> ShadowPlay Notifier</text>
+  <rect x="554.0" y="434" width="10" height="10" rx="2" fill="#A78BFA"/>
+  <text x="572.0" y="444" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#B9C8DF"><tspan font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" fill="#7D8FB3">04</tspan> APEX GIF MAKER</text>
+  <rect x="32.0" y="458" width="10" height="10" rx="2" fill="#5B9DF5"/>
+  <text x="50.0" y="468" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#B9C8DF"><tspan font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" fill="#7D8FB3">05</tspan> GamePadTester</text>
+  <rect x="206.0" y="458" width="10" height="10" rx="2" fill="#C084FC"/>
+  <text x="224.0" y="468" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#B9C8DF"><tspan font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" fill="#7D8FB3">06</tspan> ImageUpscaler</text>
+  <rect x="380.0" y="458" width="10" height="10" rx="2" fill="#F59E5B"/>
+  <text x="398.0" y="468" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#B9C8DF"><tspan font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" fill="#7D8FB3">07</tspan> AI Agents Usage Monitor</text>
+  <text x="32" y="498" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" fill="#5D6F93">Source: public GitHub REST API · drafts excluded · refreshed by GitHub Actions</text>
+</svg>

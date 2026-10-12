@@ -1,0 +1,334 @@
+"""Refresh the release badges and the release-insights graphic from public GitHub data.
+
+Runs on a schedule in .github/workflows/refresh-data.yml and can be run locally:
+
+    python scripts/update_insights.py
+
+Outputs (generated, do not edit by hand):
+    assets/generated/release-<slug>.svg   latest stable release + date per project
+    assets/generated/insights.svg         totals and monthly release activity
+
+Only the public GitHub REST API is used. GITHUB_TOKEN is optional and only
+raises the rate limit. Every request is made before any file is written: if a
+request fails, the script exits non-zero and the committed files stay as they
+are. Files are rewritten only when their data actually changed.
+"""
+
+from __future__ import annotations
+
+import json
+import os
+import re
+import sys
+import urllib.error
+import urllib.request
+from collections import defaultdict
+from datetime import datetime, timezone
+from pathlib import Path
+from xml.sax.saxutils import escape
+
+ROOT = Path(__file__).resolve().parent.parent
+CONFIG = ROOT / "scripts" / "projects.json"
+OUT_DIR = ROOT / "assets" / "generated"
+API = "https://api.github.com"
+
+SANS = "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
+MONO = "'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace"
+MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+# --------------------------------------------------------------------------- data
+
+def request(url: str) -> tuple[object, dict]:
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "deuxdoom-profile-insights",
+    }
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=30) as response:
+        return json.load(response), dict(response.headers)
+
+
+def request_all(url: str) -> list:
+    items: list = []
+    while url:
+        data, headers = request(url)
+        items.extend(data)  # type: ignore[arg-type]
+        match = re.search(r'<([^>]+)>;\s*rel="next"', headers.get("Link", ""))
+        url = match.group(1) if match else ""
+    return items
+
+
+def latest_stable(owner: str, repo: str) -> dict | None:
+    """GitHub's own notion of "latest": newest non-draft, non-prerelease release."""
+    try:
+        data, _ = request(f"{API}/repos/{owner}/{repo}/releases/latest")
+    except urllib.error.HTTPError as error:
+        if error.code == 404:
+            return None
+        raise
+    return data  # type: ignore[return-value]
+
+
+def parse_time(value: str) -> datetime:
+    return datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+
+
+def collect(config: dict) -> list[dict]:
+    owner = config["owner"]
+    projects = []
+    for project in config["projects"]:
+        repo = project["repo"]
+        releases = [
+            r for r in request_all(f"{API}/repos/{owner}/{repo}/releases?per_page=100")
+            if not r.get("draft") and r.get("published_at")
+        ]
+        stable = latest_stable(owner, repo)
+        newer_pre = None
+        pres = sorted((r for r in releases if r.get("prerelease")), key=lambda r: r["published_at"], reverse=True)
+        if pres and (stable is None or pres[0]["published_at"] > stable["published_at"]):
+            newer_pre = pres[0]
+        projects.append({
+            **project,
+            "releases": [
+                {
+                    "tag": r["tag_name"],
+                    "published": parse_time(r["published_at"]),
+                    "downloads": sum(a.get("download_count", 0) for a in r.get("assets", [])),
+                }
+                for r in releases
+            ],
+            "stable": {"tag": stable["tag_name"], "published": parse_time(stable["published_at"])} if stable else None,
+            "pre": {"tag": newer_pre["tag_name"], "published": parse_time(newer_pre["published_at"])} if newer_pre else None,
+        })
+    return projects
+
+
+# --------------------------------------------------------------------------- helpers
+
+def version(tag: str) -> str:
+    return f"v{tag}" if tag[:1].isdigit() else tag
+
+
+def compact(n: int) -> str:
+    if n < 1000:
+        return f"{n:,}"
+    if n < 100_000:
+        return f"{n / 1000:.1f}k".replace(".0k", "k")
+    return f"{round(n / 1000):,}k"
+
+
+def text_width(text: str, size: float) -> float:
+    """Generous width estimate for monospace text (covers Consolas, Menlo, DejaVu)."""
+    return len(text) * size * 0.61
+
+
+def fit(text: str, size: float, max_width: float) -> str:
+    """textLength attributes that squeeze proportional text only when it may overflow."""
+    estimate = len(text) * size * 0.56
+    if estimate <= max_width:
+        return ""
+    return f' textLength="{max_width:.0f}" lengthAdjust="spacingAndGlyphs"'
+
+
+def month_key(dt: datetime) -> tuple[int, int]:
+    return dt.year, dt.month
+
+
+def last_months(now: datetime, count: int = 12) -> list[tuple[int, int]]:
+    year, month = now.year, now.month
+    keys = []
+    for _ in range(count):
+        keys.append((year, month))
+        month -= 1
+        if month == 0:
+            year, month = year - 1, 12
+    return list(reversed(keys))
+
+
+# --------------------------------------------------------------------------- release badge
+
+def release_badge(project: dict) -> str:
+    stable, pre = project["stable"], project["pre"]
+    h, size, pad = 24, 12, 10
+    segments: list[tuple[str, str, str, bool]] = []  # text, fill, text colour, leading dot
+    if stable:
+        segments.append((version(stable["tag"]), "#1D2A45", "#F0F4FA", True))
+        segments.append((stable["published"].strftime("%Y-%m-%d"), "#131C33", "#B9C8DF", False))
+        title = f"{project['name']}: latest stable release {version(stable['tag'])}, published {stable['published']:%Y-%m-%d} (UTC)"
+    else:
+        segments.append(("No published release", "#131C33", "#8193B5", False))
+        title = f"{project['name']}: no published stable release"
+    if pre:
+        segments.append((f"pre-release {version(pre['tag'])}", "#241B3D", "#C8B8FF", False))
+        title += f"; newer pre-release {version(pre['tag'])}"
+
+    parts, x = [], 0.0
+    for text, fill, colour, dot in segments:
+        inner = text_width(text, size) + (14 if dot else 0)
+        w = round(inner + pad * 2)
+        parts.append(f'<rect x="{x:g}" width="{w}" height="{h}" fill="{fill}"/>')
+        tx = x + pad
+        if dot:
+            parts.append(f'<circle cx="{tx + 4:g}" cy="12" r="4" fill="#47C9A2"/>')
+            tx += 14
+        weight = ' font-weight="700"' if dot else ""
+        parts.append(f'<text x="{tx:g}" y="16.5" fill="{colour}"{weight}>{escape(text)}</text>')
+        x += w
+    width = round(x)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{h}" viewBox="0 0 {width} {h}" role="img" aria-label="{escape(title)}">
+  <title>{escape(title)}</title>
+  <clipPath id="r"><rect width="{width}" height="{h}" rx="6"/></clipPath>
+  <g clip-path="url(#r)" font-family="{MONO}" font-size="{size}">
+    {chr(10).join('    ' + p for p in parts).strip()}
+  </g>
+  <rect x=".5" y=".5" width="{width - 1}" height="{h - 1}" rx="5.5" fill="none" stroke="#2E3F63"/>
+</svg>
+"""
+
+
+# --------------------------------------------------------------------------- insights graphic
+
+def insights(projects: list[dict], now: datetime, as_of: str) -> str:
+    W, H = 760, 520
+    all_releases = [(p, r) for p in projects for r in p["releases"]]
+    total_releases = len(all_releases)
+    total_downloads = sum(r["downloads"] for _, r in all_releases)
+    first = min((r["published"] for _, r in all_releases), default=None)
+    latest_p, latest_r = max(all_releases, key=lambda pr: pr[1]["published"], default=(None, None))
+
+    tiles = [
+        (str(total_releases), "Releases published", f"across {len(projects)} apps"),
+        (compact(total_downloads), "Release downloads", "GitHub Release assets"),
+        (f"{MONTHS[first.month - 1]} {first.year}" if first else "—", "Shipping since", "first public release"),
+        (
+            f"{MONTHS[latest_r['published'].month - 1]} {latest_r['published'].day}" if latest_r else "—",
+            "Latest release",
+            f"{latest_p['name']} {version(latest_r['tag'])}" if latest_r else "",
+        ),
+    ]
+
+    out: list[str] = []
+    add = out.append
+    add(f'<rect x=".75" y=".75" width="{W - 1.5}" height="{H - 1.5}" rx="18" fill="#0B1020" stroke="#263451" stroke-width="1.5"/>')
+    add(f'<rect x="32" y="31" width="9" height="9" fill="#65D6E6"/>')
+    add(f'<text x="50" y="40" font-family="{MONO}" font-size="15" letter-spacing="3" fill="#65D6E6">RELEASE INSIGHTS</text>')
+    add(f'<text x="{W - 32}" y="40" text-anchor="end" font-family="{MONO}" font-size="13" fill="#7D8FB3" data-as-of="{as_of}">Data as of {as_of} UTC</text>')
+
+    gap, top, tile_h = 12, 62, 104
+    tile_w = (W - 64 - gap * 3) / 4
+    for i, (value, label, sub) in enumerate(tiles):
+        x = 32 + i * (tile_w + gap)
+        add(f'<rect x="{x:.1f}" y="{top}" width="{tile_w:.1f}" height="{tile_h}" rx="12" fill="#121B33" stroke="#22304D"/>')
+        add(f'<text x="{x + 16:.1f}" y="{top + 44}" font-family="{SANS}" font-size="30" font-weight="700" fill="#F0F4FA">{escape(value)}</text>')
+        add(f'<text x="{x + 16:.1f}" y="{top + 71}" font-family="{SANS}" font-size="15" fill="#B9C8DF"{fit(label, 15, tile_w - 28)}>{escape(label)}</text>')
+        add(f'<text x="{x + 16:.1f}" y="{top + 91}" font-family="{SANS}" font-size="13" fill="#7D8FB3"{fit(sub, 13, tile_w - 28)}>{escape(sub)}</text>')
+
+    # monthly stacked bars
+    months = last_months(now)
+    counts: dict[tuple[int, int], list[int]] = defaultdict(lambda: [0] * len(projects))
+    for i, p in enumerate(projects):
+        for r in p["releases"]:
+            counts[month_key(r["published"])][i] += 1
+    totals = [sum(counts[m]) for m in months]
+    peak = max(totals + [1])
+    step = 5 if peak <= 25 else 10
+    ceiling = -(-peak // step) * step
+
+    add(f'<text x="32" y="210" font-family="{SANS}" font-size="16" font-weight="600" fill="#F0F4FA">Releases per month</text>')
+    add(f'<text x="{W - 32}" y="210" text-anchor="end" font-family="{SANS}" font-size="13" fill="#7D8FB3">last 12 months · stacked by project</text>')
+    cx0, cx1, cy0, cy1 = 64, W - 32, 236, 380
+    for g in range(3):
+        value = ceiling * g // 2
+        y = cy1 - (cy1 - cy0) * g / 2
+        add(f'<path d="M{cx0} {y:.1f}H{cx1}" stroke="#1E2A45" stroke-width="1"/>')
+        add(f'<text x="{cx0 - 10}" y="{y + 4:.1f}" text-anchor="end" font-family="{MONO}" font-size="13" fill="#7D8FB3">{value}</text>')
+    slot = (cx1 - cx0) / len(months)
+    bar_w = min(30, slot * 0.6)
+    for k, m in enumerate(months):
+        bx = cx0 + slot * k + (slot - bar_w) / 2
+        y = cy1
+        for i, p in enumerate(projects):
+            n = counts[m][i]
+            if not n:
+                continue
+            h = (cy1 - cy0) * n / ceiling
+            y -= h
+            add(f'<rect x="{bx:.1f}" y="{y:.1f}" width="{bar_w:.1f}" height="{h:.1f}" fill="{p["accent"]}"/>')
+        if totals[k]:
+            add(f'<text x="{bx + bar_w / 2:.1f}" y="{y - 7:.1f}" text-anchor="middle" font-family="{MONO}" font-size="13" fill="#B9C8DF">{totals[k]}</text>')
+        label = MONTHS[m[1] - 1]
+        add(f'<text x="{bx + bar_w / 2:.1f}" y="{cy1 + 20}" text-anchor="middle" font-family="{MONO}" font-size="13" fill="#7D8FB3">{label}</text>')
+        if k == 0 or m[1] == 1:
+            add(f'<text x="{bx + bar_w / 2:.1f}" y="{cy1 + 35}" text-anchor="middle" font-family="{MONO}" font-size="12" fill="#5D6F93">{m[0]}</text>')
+
+    # legend
+    col_w = (W - 64) / 4
+    for i, p in enumerate(projects):
+        lx = 32 + col_w * (i % 4)
+        ly = 444 + 24 * (i // 4)
+        add(f'<rect x="{lx:.1f}" y="{ly - 10}" width="10" height="10" rx="2" fill="{p["accent"]}"/>')
+        add(f'<text x="{lx + 18:.1f}" y="{ly}" font-family="{SANS}" font-size="14" fill="#B9C8DF"><tspan font-family="{MONO}" fill="#7D8FB3">{p["no"]}</tspan> {escape(p["name"])}</text>')
+
+    add(f'<text x="32" y="{H - 22}" font-family="{MONO}" font-size="12" fill="#5D6F93">Source: public GitHub REST API · drafts excluded · refreshed by GitHub Actions</text>')
+
+    summary = (
+        f"Release insights: {total_releases} releases across {len(projects)} apps, "
+        f"{total_downloads:,} release downloads, data as of {as_of} UTC"
+    )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{escape(summary)}">
+  <title>{escape(summary)}</title>
+  {chr(10).join('  ' + line for line in out).strip()}
+</svg>
+"""
+
+
+# --------------------------------------------------------------------------- output
+
+def write_if_changed(path: Path, content: str) -> bool:
+    if path.exists() and path.read_text(encoding="utf-8") == content:
+        return False
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(content, encoding="utf-8", newline="\n")
+    tmp.replace(path)
+    return True
+
+
+def main() -> int:
+    config = json.loads(CONFIG.read_text(encoding="utf-8"))
+    try:
+        projects = collect(config)
+    except (urllib.error.URLError, TimeoutError, ValueError, KeyError) as error:
+        print(f"error: GitHub API request failed, keeping existing files: {error}", file=sys.stderr)
+        return 1
+
+    now = datetime.now(timezone.utc)
+    outputs: dict[Path, str] = {}
+    for project in projects:
+        outputs[OUT_DIR / f"release-{project['slug']}.svg"] = release_badge(project)
+
+    # Keep the previous "as of" date unless the data itself changed, so an
+    # unchanged graphic does not produce a commit every run.
+    insights_path = OUT_DIR / "insights.svg"
+    today = now.strftime("%Y-%m-%d")
+    previous = insights_path.read_text(encoding="utf-8") if insights_path.exists() else ""
+    match = re.search(r'data-as-of="([0-9-]+)"', previous)
+    if match and insights(projects, now, match.group(1)) == previous:
+        outputs[insights_path] = previous
+    else:
+        outputs[insights_path] = insights(projects, now, today)
+
+    changed = [path for path, content in outputs.items() if write_if_changed(path, content)]
+    for path in changed:
+        print(f"updated {path.relative_to(ROOT).as_posix()}")
+    if not changed:
+        print("no changes")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
