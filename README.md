@@ -116,7 +116,7 @@ Shows NVIDIA ShadowPlay recording status in large type on a secondary monitor, a
 - Idle wallpaper with clock, Open-Meteo weather, Spotify now-playing, a 24-band audio visualizer and the moon phase
 - Single portable EXE that pauses rendering while hidden in the tray, with SHA-256 checked in-app updates
 
-<b>Stack</b>&nbsp; `Python` `Tkinter` `PyInstaller` `Open-Meteo API`<br>
+<b>Stack</b>&nbsp; `Python` `Tkinter` `PyInstaller` `Open-Meteo`<br>
 <b>Distribution</b>&nbsp; Freeware · Windows 10/11 · source not published<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img align="absmiddle" src="assets/generated/release-shadowplay-notifier.svg" alt="Latest stable release of ShadowPlay Notifier"></a>
 

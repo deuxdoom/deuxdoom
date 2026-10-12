@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="104" height="32" viewBox="0 0 104 32" role="img" aria-label="Repository">
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="32" viewBox="0 0 96 32" role="img" aria-label="Repository">
   <title>Repository</title>
-  <rect x=".75" y=".75" width="102.5" height="30.5" rx="7" fill="#172440" stroke="#2E3F63" stroke-width="1.5"/>
-  <g transform="translate(10.5 8.5) scale(.9)" fill="none" stroke="#65D6E6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <rect x=".75" y=".75" width="94.5" height="30.5" rx="7" fill="#172440" stroke="#2E3F63" stroke-width="1.5"/>
+  <g transform="translate(9.5 8.8) scale(.85)" fill="none" stroke="#65D6E6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M2.5 1.5h9a1 1 0 0 1 1 1v12h-9.5a1.5 1.5 0 0 1 0-3h9.5"/>
     <path d="M2.5 1.5a1 1 0 0 0-1 1v10.5"/>
   </g>
-  <text x="31.5" y="20.5" textLength="62" lengthAdjust="spacingAndGlyphs" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#F0F4FA">Repository</text>
+  <text x="28.5" y="20.5" textLength="58" lengthAdjust="spacingAndGlyphs" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#F0F4FA">Repository</text>
 </svg>
