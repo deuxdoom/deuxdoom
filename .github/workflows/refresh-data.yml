@@ -66,7 +66,7 @@ jobs:
                 "name": "ShadowPlay Notifier",
                 "slug": "shadowplay-notifier",
                 "accent": "#F2626B",
-                "cover": ["assets/main.png"]
+                "cover": ["assets/wallpaper.png"]
               },
               {
                 "no": "04",
@@ -86,6 +86,14 @@ jobs:
               },
               {
                 "no": "06",
+                "repo": "PICVIUM",
+                "name": "PICVIUM",
+                "slug": "picvium",
+                "accent": "#00C8FF",
+                "cover": ["docs/assets/screens/viewer.png"]
+              },
+              {
+                "no": "07",
                 "repo": "ImageUpscaler",
                 "name": "ImageUpscaler",
                 "slug": "image-upscaler",
@@ -93,7 +101,7 @@ jobs:
                 "cover": ["docs/site/media/app-comparison.png"]
               },
               {
-                "no": "07",
+                "no": "08",
                 "repo": "usage-monitor-for-claude",
                 "name": "AI Agents Usage Monitor",
                 "slug": "ai-agents-usage-monitor",
@@ -378,7 +386,7 @@ jobs:
                   lx = 32 + col_w * (i % 4)
                   ly = 444 + 24 * (i // 4)
                   add(f'<rect x="{lx:.1f}" y="{ly - 10}" width="10" height="10" rx="2" fill="{p["accent"]}"/>')
-                  add(f'<text x="{lx + 18:.1f}" y="{ly}" font-family="{SANS}" font-size="14" fill="#B9C8DF"><tspan font-family="{MONO}" fill="#7D8FB3">{p["no"]}</tspan> {escape(p["name"])}</text>')
+                  add(f'<text x="{lx + 18:.1f}" y="{ly}" font-family="{SANS}" font-size="14" fill="#B9C8DF"{fit(p["no"] + " " + p["name"], 14, col_w - 30)}><tspan font-family="{MONO}" fill="#7D8FB3">{p["no"]}</tspan> {escape(p["name"])}</text>')
 
               add(f'<text x="32" y="{H - 22}" font-family="{MONO}" font-size="12" fill="#5D6F93">Source: public GitHub REST API · drafts excluded · refreshed by GitHub Actions</text>')
 

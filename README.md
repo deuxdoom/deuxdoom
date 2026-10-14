@@ -1,5 +1,10 @@
 <a id="top"></a>
 
+<p align="right">
+  <a href="#top" title="English"><img src="assets/ui/btn-language-en-active.svg" width="96" height="32" alt="English — current language"></a>
+  <a href="README.ko.md" title="한국어로 읽기"><img src="assets/ui/btn-language-ko.svg" width="96" height="32" alt="한국어"></a>
+</p>
+
 <div align="center">
 
 <picture>
@@ -15,6 +20,7 @@
   <a href="#toolbox"><b>Toolbox</b></a> &nbsp;·&nbsp;
   <a href="#insights"><b>Insights</b></a> &nbsp;·&nbsp;
   <a href="#releases"><b>Releases</b></a> &nbsp;·&nbsp;
+  <a href="#engineering"><b>Engineering</b></a> &nbsp;·&nbsp;
   <a href="#connect"><b>Connect</b></a>
 </p>
 
@@ -26,7 +32,7 @@
 
 I build practical desktop applications and developer utilities, focusing on reliable functionality, thoughtful interfaces, and everyday usability.
 
-I work independently and take each app from design through implementation, debugging, release and maintenance. Since August 2025 that has produced seven Windows applications, from media downloaders and a GIF tool for controller screens to hardware diagnostics, an image upscaler and tray utilities. Each one ships through GitHub Releases with its own project site, a changelog and a built-in updater.
+I work independently and take each app from design through implementation, debugging, release and maintenance. Since August 2025 that has produced eight Windows applications, from media downloaders and a GIF tool for controller screens to hardware diagnostics, an image viewer and editor, an image upscaler and tray utilities. Each one ships through GitHub Releases with its own project site and a changelog.
 
 | Principle | How it shows up in the software |
 |:--|:--|
@@ -40,7 +46,7 @@ I work independently and take each app from design through implementation, debug
 
 ## 03 · Featured Software
 
-Seven Windows applications, numbered in priority order. Six are free, closed-source releases whose repositories hold documentation, changelogs and binaries; one is an open-source (MIT) fork.
+Eight Windows applications, numbered in priority order. Seven are free, closed-source releases whose repositories hold documentation, changelogs and binaries; one is an open-source (MIT) fork.
 
 <a id="tver-downloader"></a>
 
@@ -81,7 +87,7 @@ Saves CHZZK VODs and clips, as well as YouTube, Instagram, TVer and other suppor
 - Keeps the original by default, with optional H.264 / H.265 on CPU or NVENC, and SHA-256 verified self-updates
 
 <b>Stack</b>&nbsp; `Python` `PySide6` `yt-dlp` `FFmpeg` `NVENC`<br>
-<b>Distribution</b>&nbsp; Free for personal use · Windows 10/11 x64 · source not published<br>
+<b>Distribution</b>&nbsp; Free for personal, non-commercial use · Windows 10/11 x64 · source not published<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img align="absmiddle" src="assets/generated/release-chzzk-downloader.svg" alt="Latest stable release of ChzzkDownloader"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/ChzzkDownloader) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/ChzzkDownloader/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/ChzzkDownloader/)
@@ -94,7 +100,7 @@ Saves CHZZK VODs and clips, as well as YouTube, Instagram, TVer and other suppor
 
 **Recording status display for a second monitor**
 
-<a href="https://github.com/deuxdoom/Shadowplay-Notifier"><img align="right" width="440" src="assets/projects/03-shadowplay-notifier.png" alt="ShadowPlay Notifier recording screen with elapsed time, file size and bitrate"></a>
+<a href="https://github.com/deuxdoom/Shadowplay-Notifier"><img align="right" width="440" src="assets/projects/03-shadowplay-notifier.png" alt="ShadowPlay Notifier idle wallpaper with a clock, weather and now-playing information"></a>
 
 Shows NVIDIA ShadowPlay recording status in large type on a secondary monitor, and turns into a clock, weather and now-playing wallpaper while idle.
 
@@ -157,13 +163,36 @@ Measures stick circularity and polling rate with the same methods as gamepad-tes
 
 <br clear="right">
 
+<a id="picvium"></a>
+
+### 06 · PICVIUM
+
+**Image viewer and editor with RAW support and local upscaling**
+
+<a href="https://github.com/deuxdoom/PICVIUM"><img align="right" width="440" src="assets/projects/06-picvium.png" alt="PICVIUM image viewer with a photo, editing toolbar and EXIF information sidebar"></a>
+
+Views photos, graphics, camera RAW files and document images in one window, with local editing, format conversion and Real-ESRGAN upscaling. The Windows release includes its .NET runtime and supports portable settings.
+
+- Folder thumbnails, zoom and pan, animation playback, multipage navigation and an EXIF sidebar
+- Crop, resize, rotate and flip with undo / redo; save or batch-convert to seven image formats
+- Photo and illustration upscaling at 2×, 4× or 8× on a Vulkan GPU, with cancellation and result comparison
+- Customizable toolbar and icon themes, command search, Windows file associations and 9 UI languages that switch without a restart
+
+<b>Stack</b>&nbsp; `C#` `.NET 10` `Avalonia 12` `Magick.NET` `LibRaw` `PDFium` `Real-ESRGAN / Vulkan`<br>
+<b>Distribution</b>&nbsp; Free for personal, non-commercial use · Windows 10/11 x64 · source not published<br>
+<b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img align="absmiddle" src="assets/generated/release-picvium.svg" alt="Latest stable release of PICVIUM"></a>
+
+[![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/PICVIUM) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/PICVIUM/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/PICVIUM/)
+
+<br clear="right">
+
 <a id="image-upscaler"></a>
 
-### 06 · ImageUpscaler
+### 07 · ImageUpscaler
 
 **Portable, offline AI image upscaler**
 
-<a href="https://github.com/deuxdoom/ImageUpscaler"><img align="right" width="440" src="assets/projects/06-image-upscaler.png" alt="ImageUpscaler with an image list, a before/after comparison slider and upscale settings"></a>
+<a href="https://github.com/deuxdoom/ImageUpscaler"><img align="right" width="440" src="assets/projects/07-image-upscaler.png" alt="ImageUpscaler with an image list, a before/after comparison slider and upscale settings"></a>
 
 Enlarges photos, illustrations, transparent images and pixel art up to 8× on the local PC. One portable EXE bundles the Real-ESRGAN models, codecs and runtime.
 
@@ -182,11 +211,11 @@ Enlarges photos, illustrations, transparent images and pixel art up to 8× on th
 
 <a id="ai-agents-usage-monitor"></a>
 
-### 07 · AI Agents Usage Monitor
+### 08 · AI Agents Usage Monitor
 
 **Claude and Codex usage limits in the Windows tray**
 
-<a href="https://github.com/deuxdoom/usage-monitor-for-claude"><img align="right" width="440" src="assets/projects/07-ai-agents-usage-monitor.png" alt="AI Agents Usage Monitor detail popup for Claude and Codex, and the one-line bar mode"></a>
+<a href="https://github.com/deuxdoom/usage-monitor-for-claude"><img align="right" width="440" src="assets/projects/08-ai-agents-usage-monitor.png" alt="AI Agents Usage Monitor detail popup for Claude and Codex, and the one-line bar mode"></a>
 
 A lightweight tray app that shows Claude and Codex usage limits in real time. It is an extended fork of [jens-duttke/usage-monitor-for-claude](https://github.com/jens-duttke/usage-monitor-for-claude) that adds Codex support, a one-line bar mode and a verified in-app updater.
 
@@ -213,11 +242,11 @@ Technologies that ship in the releases above, grouped by area. The numbers refer
 
 | Area | Stack |
 |:--|:--|
-| **Languages** | ![Python](https://img.shields.io/badge/Python-172440?style=flat-square&logo=python&logoColor=65D6E6) ![C#](https://img.shields.io/badge/C%23-172440?style=flat-square) ![C++](https://img.shields.io/badge/C%2B%2B-172440?style=flat-square&logo=cplusplus&logoColor=65D6E6) ![JavaScript](https://img.shields.io/badge/JavaScript-172440?style=flat-square&logo=javascript&logoColor=65D6E6)<br><sub>Python 01–05, 07 · C# 06, 07 · C++20 measurement core 05 · JavaScript / HTML / CSS for project sites and the 07 popup UI</sub> |
-| **Desktop & runtime** | ![PySide6](https://img.shields.io/badge/PySide6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![PyQt6](https://img.shields.io/badge/PyQt6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![Tkinter](https://img.shields.io/badge/Tkinter-172440?style=flat-square) ![Windows Forms](https://img.shields.io/badge/Windows_Forms-172440?style=flat-square) ![pywebview](https://img.shields.io/badge/pywebview-172440?style=flat-square) ![.NET 8](https://img.shields.io/badge/.NET_8-172440?style=flat-square&logo=dotnet&logoColor=65D6E6) ![PyInstaller](https://img.shields.io/badge/PyInstaller-172440?style=flat-square)<br><sub>PySide6 02, 04, 05 · PyQt6 01 · Tkinter 03 · Windows Forms on .NET 8 06 · pywebview and pystray 07 · single-EXE builds with PyInstaller 03, 07</sub> |
-| **Media & imaging** | ![FFmpeg](https://img.shields.io/badge/FFmpeg-172440?style=flat-square&logo=ffmpeg&logoColor=65D6E6) ![yt-dlp](https://img.shields.io/badge/yt--dlp-172440?style=flat-square) ![NVIDIA NVENC](https://img.shields.io/badge/NVIDIA_NVENC-172440?style=flat-square&logo=nvidia&logoColor=65D6E6) ![Real-ESRGAN](https://img.shields.io/badge/Real--ESRGAN-172440?style=flat-square) ![Vulkan](https://img.shields.io/badge/Vulkan-172440?style=flat-square&logo=vulkan&logoColor=65D6E6) ![SkiaSharp](https://img.shields.io/badge/SkiaSharp-172440?style=flat-square) ![Magick.NET](https://img.shields.io/badge/Magick.NET-172440?style=flat-square)<br><sub>FFmpeg 01, 02, 04 · yt-dlp 01, 02 · NVENC hardware encoding 01, 02 · Real-ESRGAN through ncnn / Vulkan, SkiaSharp and Magick.NET 06</sub> |
+| **Languages** | ![Python](https://img.shields.io/badge/Python-172440?style=flat-square&logo=python&logoColor=65D6E6) ![C#](https://img.shields.io/badge/C%23-172440?style=flat-square) ![C++](https://img.shields.io/badge/C%2B%2B-172440?style=flat-square&logo=cplusplus&logoColor=65D6E6) ![JavaScript](https://img.shields.io/badge/JavaScript-172440?style=flat-square&logo=javascript&logoColor=65D6E6)<br><sub>Python 01–05, 08 · C# 06–08 · C++20 measurement core 05 · JavaScript / HTML / CSS for project sites and the 08 popup UI</sub> |
+| **Desktop & runtime** | ![PySide6](https://img.shields.io/badge/PySide6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![PyQt6](https://img.shields.io/badge/PyQt6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![Tkinter](https://img.shields.io/badge/Tkinter-172440?style=flat-square) ![Avalonia](https://img.shields.io/badge/Avalonia-172440?style=flat-square) ![Windows Forms](https://img.shields.io/badge/Windows_Forms-172440?style=flat-square) ![pywebview](https://img.shields.io/badge/pywebview-172440?style=flat-square) ![.NET 8](https://img.shields.io/badge/.NET_8-172440?style=flat-square&logo=dotnet&logoColor=65D6E6) ![.NET 10](https://img.shields.io/badge/.NET_10-172440?style=flat-square&logo=dotnet&logoColor=65D6E6) ![PyInstaller](https://img.shields.io/badge/PyInstaller-172440?style=flat-square)<br><sub>PySide6 02, 04, 05 · PyQt6 01 · Tkinter 03 · Avalonia 12 on .NET 10 06 · Windows Forms on .NET 8 07 · pywebview and pystray 08 · single-EXE builds with PyInstaller 03, 08</sub> |
+| **Media & imaging** | ![FFmpeg](https://img.shields.io/badge/FFmpeg-172440?style=flat-square&logo=ffmpeg&logoColor=65D6E6) ![yt-dlp](https://img.shields.io/badge/yt--dlp-172440?style=flat-square) ![NVIDIA NVENC](https://img.shields.io/badge/NVIDIA_NVENC-172440?style=flat-square&logo=nvidia&logoColor=65D6E6) ![Real-ESRGAN](https://img.shields.io/badge/Real--ESRGAN-172440?style=flat-square) ![Vulkan](https://img.shields.io/badge/Vulkan-172440?style=flat-square&logo=vulkan&logoColor=65D6E6) ![SkiaSharp](https://img.shields.io/badge/SkiaSharp-172440?style=flat-square) ![Magick.NET](https://img.shields.io/badge/Magick.NET-172440?style=flat-square) ![LibRaw](https://img.shields.io/badge/LibRaw-172440?style=flat-square) ![PDFium](https://img.shields.io/badge/PDFium-172440?style=flat-square)<br><sub>FFmpeg 01, 02, 04 · yt-dlp 01, 02 · NVENC hardware encoding 01, 02 · Real-ESRGAN / Vulkan and Magick.NET 06, 07 · SkiaSharp and ncnn 07 · LibRaw and PDFium 06</sub> |
 | **Input & hardware** | ![SDL3](https://img.shields.io/badge/SDL3-172440?style=flat-square) ![XInput](https://img.shields.io/badge/XInput-172440?style=flat-square) ![Raw HID](https://img.shields.io/badge/Raw_HID-172440?style=flat-square)<br><sub>Controller input, polling-rate timing and haptics in 05</sub> |
-| **Delivery & workflow** | ![Git](https://img.shields.io/badge/Git-172440?style=flat-square&logo=git&logoColor=65D6E6) ![GitHub Releases](https://img.shields.io/badge/GitHub_Releases-172440?style=flat-square&logo=github&logoColor=65D6E6) ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-172440?style=flat-square&logo=githubpages&logoColor=65D6E6) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-172440?style=flat-square&logo=githubactions&logoColor=65D6E6) ![VS Code](https://img.shields.io/badge/VS_Code-172440?style=flat-square)<br><sub>Every app ships through GitHub Releases with a GitHub Pages site and an in-app updater · GitHub Actions refreshes the data on this profile</sub> |
+| **Delivery & workflow** | ![Git](https://img.shields.io/badge/Git-172440?style=flat-square&logo=git&logoColor=65D6E6) ![GitHub Releases](https://img.shields.io/badge/GitHub_Releases-172440?style=flat-square&logo=github&logoColor=65D6E6) ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-172440?style=flat-square&logo=githubpages&logoColor=65D6E6) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-172440?style=flat-square&logo=githubactions&logoColor=65D6E6) ![VS Code](https://img.shields.io/badge/VS_Code-172440?style=flat-square)<br><sub>Every app ships through GitHub Releases with a GitHub Pages site · GitHub Actions refreshes the data on this profile</sub> |
 
 <a id="insights"></a>
 
@@ -240,21 +269,42 @@ Technologies that ship in the releases above, grouped by area. The numbers refer
 | **03 · [ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)** | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier latest release"></a> |
 | **04 · [APEX GIF MAKER](https://github.com/deuxdoom/APEXGIFMAKER)** | <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/release-apex-gif-maker.svg" alt="APEX GIF MAKER latest release"></a> |
 | **05 · [GamePadTester](https://github.com/deuxdoom/GamePadTester)** | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester latest release"></a> |
-| **06 · [ImageUpscaler](https://github.com/deuxdoom/ImageUpscaler)** | <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/release-image-upscaler.svg" alt="ImageUpscaler latest release"></a> |
-| **07 · [AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)** | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor latest release"></a> |
+| **06 · [PICVIUM](https://github.com/deuxdoom/PICVIUM)** | <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/release-picvium.svg" alt="PICVIUM latest release"></a> |
+| **07 · [ImageUpscaler](https://github.com/deuxdoom/ImageUpscaler)** | <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/release-image-upscaler.svg" alt="ImageUpscaler latest release"></a> |
+| **08 · [AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)** | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor latest release"></a> |
 
 <sub>Read from each repository's GitHub Releases: the newest published release that is not a draft or pre-release. A newer pre-release, if one exists, appears as an extra segment, and a project without a release shows “No published release”. Refreshed every six hours.</sub>
 
+<a id="engineering"></a>
+
+## 07 · Engineering in Practice
+
+Selected implementation decisions from the shipped applications: how input is measured, where images are processed, and how desktop updates recover from failure.
+
+<picture>
+  <source media="(max-width: 640px)" srcset="assets/engineering-compact.svg">
+  <img src="assets/engineering.svg" width="760" alt="Engineering highlights: GamePadTester uses a dedicated C++20 thread for controller measurements; PICVIUM processes images locally with Vulkan; ShadowPlay Notifier verifies updates with SHA-256 and restores the previous app on failure.">
+</picture>
+
+**Project details** · [Native controller measurement](https://github.com/deuxdoom/GamePadTester/blob/main/readme.md) · [Local image processing](https://github.com/deuxdoom/PICVIUM/blob/main/README.md) · [Verified updates and recovery](https://github.com/deuxdoom/Shadowplay-Notifier/blob/main/README.md)
+
+<picture>
+  <source media="(max-width: 640px)" srcset="assets/update-flow-compact.svg">
+  <img src="assets/update-flow.svg" width="760" alt="ShadowPlay Notifier update flow: download, verify size and SHA-256, replace and restart. Restore the previous app on installation or restart failure, preserving settings and logs.">
+</picture>
+
+<sub>The update flow shows the documented behavior of ShadowPlay Notifier. The highlights above describe specific projects; implementation details are linked in their READMEs.</sub>
+
 <a id="connect"></a>
 
-## 07 · Connect
+## 08 · Connect
 
 - **GitHub** · [@deuxdoom](https://github.com/deuxdoom) · [all repositories](https://github.com/deuxdoom?tab=repositories)
 - **Mastodon** · [@deuxdoom@mastodon.social](https://mastodon.social/@deuxdoom)
 - **Support** · [GitHub Sponsors](https://github.com/sponsors/deuxdoom)
 - **Feedback** · Bug reports and feature requests are welcome in each project's Issues tab.
 
-**Project sites** · [TVer Downloader](https://deuxdoom.github.io/TVerDownloader/) · [ChzzkDownloader](https://deuxdoom.github.io/ChzzkDownloader/) · [ShadowPlay Notifier](https://deuxdoom.github.io/Shadowplay-Notifier/) · [APEX GIF MAKER](https://deuxdoom.github.io/APEXGIFMAKER/) · [GamePadTester](https://deuxdoom.github.io/GamePadTester/) · [ImageUpscaler](https://deuxdoom.github.io/ImageUpscaler/) · [AI Agents Usage Monitor](https://deuxdoom.github.io/usage-monitor-for-claude/)
+**Project sites** · [TVer Downloader](https://deuxdoom.github.io/TVerDownloader/) · [ChzzkDownloader](https://deuxdoom.github.io/ChzzkDownloader/) · [ShadowPlay Notifier](https://deuxdoom.github.io/Shadowplay-Notifier/) · [APEX GIF MAKER](https://deuxdoom.github.io/APEXGIFMAKER/) · [GamePadTester](https://deuxdoom.github.io/GamePadTester/) · [PICVIUM](https://deuxdoom.github.io/PICVIUM/) · [ImageUpscaler](https://deuxdoom.github.io/ImageUpscaler/) · [AI Agents Usage Monitor](https://deuxdoom.github.io/usage-monitor-for-claude/)
 
 <br>
 

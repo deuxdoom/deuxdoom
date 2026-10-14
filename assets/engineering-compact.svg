@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="1094" viewBox="0 0 360 1094" role="img" aria-labelledby="title">
+  <title id="title">Engineering in practice: native C++20 controller measurements, local Vulkan image processing and verified desktop updates with recovery.</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111B32"/><stop offset="1" stop-color="#0B1020"/></linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#263451" stroke-opacity=".2"/></pattern>
+    <clipPath id="frame"><rect x="1" y="1" width="358" height="1092" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)"><rect width="360" height="1094" fill="url(#bg)"/><rect width="360" height="1094" fill="url(#grid)"/></g>
+  <rect x=".75" y=".75" width="358.5" height="1092.5" rx="20" fill="none" stroke="#263451" stroke-width="1.5"/>
+  <text x="28" y="37" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="12" font-weight="700" fill="#65D6E6" letter-spacing="1.7">ENGINEERING IN PRACTICE</text>
+  <text x="28" y="73" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="700" fill="#F0F4FA" >Built into the software.</text>
+  <text x="28" y="98" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#7D8FB3" >Selected decisions from shipped apps.</text>
+  <rect x="22" y="124" width="316" height="284" rx="13" fill="#121B33" stroke="#293957"/>
+  <rect x="23" y="142" width="3" height="29" rx="1.5" fill="#5B9DF5"/>
+  <text x="40" y="154" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#5B9DF5" letter-spacing="0.7">PRECISION</text>
+  <g transform="translate(284,170)" fill="none" stroke="#5B9DF5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".65"><path d="M0 16h8l4-9 7 18 5-9h12"/></g>
+  <text x="40" y="202" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="32" font-weight="700" fill="#F0F4FA" >C++20</text>
+  <text x="40" y="233" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#F0F4FA" >Native input</text>
+  <text x="40" y="254" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#F0F4FA" >measurement</text>
+  <text x="40" y="283" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Dedicated timing thread</text>
+  <text x="40" y="304" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >XInput / raw HID / SDL3</text>
+  <text x="40" y="325" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Polling rate, intervals, jitter</text>
+  <path d="M40 373H320" stroke="#293957"/>
+  <text x="40" y="393" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#5B9DF5" >05 / GamePadTester</text>
+  <rect x="22" y="426" width="316" height="284" rx="13" fill="#121B33" stroke="#293957"/>
+  <rect x="23" y="444" width="3" height="29" rx="1.5" fill="#00C8FF"/>
+  <text x="40" y="456" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#00C8FF" letter-spacing="0.7">LOCAL PROCESSING</text>
+  <g transform="translate(284,472)" fill="none" stroke="#00C8FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".65"><rect x="3" y="3" width="28" height="28" rx="4"/><path d="M8 24l7-8 6 6 4-5 6 7"/><circle cx="23" cy="11" r="2"/></g>
+  <text x="40" y="504" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="32" font-weight="700" fill="#F0F4FA" >VULKAN</text>
+  <text x="40" y="535" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#F0F4FA" >Images stay</text>
+  <text x="40" y="556" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#F0F4FA" >on your PC</text>
+  <text x="40" y="585" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >GPU capability checked</text>
+  <text x="40" y="606" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Real-ESRGAN, 2x / 4x / 8x</text>
+  <text x="40" y="627" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Compare before saving</text>
+  <path d="M40 675H320" stroke="#293957"/>
+  <text x="40" y="695" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#00C8FF" >06 / PICVIUM</text>
+  <rect x="22" y="728" width="316" height="284" rx="13" fill="#121B33" stroke="#293957"/>
+  <rect x="23" y="746" width="3" height="29" rx="1.5" fill="#47C9A2"/>
+  <text x="40" y="758" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#47C9A2" letter-spacing="0.7">RELIABLE DELIVERY</text>
+  <g transform="translate(284,774)" fill="none" stroke="#47C9A2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".65"><path d="M18 1l14 6v10c0 8-14 16-14 16S4 25 4 17V7z"/><path d="M11 16l5 5 10-11"/></g>
+  <text x="40" y="806" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="32" font-weight="700" fill="#F0F4FA" >SHA-256</text>
+  <text x="40" y="837" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#F0F4FA" >Verify before</text>
+  <text x="40" y="858" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#F0F4FA" >replacing the app</text>
+  <text x="40" y="887" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Release asset integrity</text>
+  <text x="40" y="908" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >User settings preserved</text>
+  <text x="40" y="929" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Restore on update failure</text>
+  <path d="M40 977H320" stroke="#293957"/>
+  <text x="40" y="997" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#47C9A2" >03 / ShadowPlay Notifier</text>
+  <text x="28" y="1073" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="10" font-weight="400" fill="#7D8FB3" letter-spacing="1">PROJECT DETAILS LINKED BELOW</text>
+</svg>

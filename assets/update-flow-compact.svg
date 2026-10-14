@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="478" viewBox="0 0 360 478" role="img" aria-labelledby="title">
+  <title id="title">ShadowPlay Notifier update flow: download the release, verify its size and SHA-256, replace and restart; restore the previous app on installation or restart failure while preserving settings and logs.</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111B32"/><stop offset="1" stop-color="#0B1020"/></linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#263451" stroke-opacity=".2"/></pattern>
+    <clipPath id="frame"><rect x="1" y="1" width="358" height="476" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)"><rect width="360" height="478" fill="url(#bg)"/><rect width="360" height="478" fill="url(#grid)"/></g>
+  <rect x=".75" y=".75" width="358.5" height="476.5" rx="20" fill="none" stroke="#263451" stroke-width="1.5"/>
+  <text x="28" y="36" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="12" font-weight="700" fill="#47C9A2" letter-spacing="1.6">VERIFIED APP UPDATES</text>
+  <text x="28" y="69" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#F0F4FA" >Check. Replace. Recover.</text>
+  <rect x="24" y="95" width="146" height="88" rx="10" fill="#121B33" stroke="#293957"/>
+  <text x="37" y="117" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#47C9A2" >01</text>
+  <text x="37" y="139" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="14" font-weight="700" fill="#F0F4FA" >DOWNLOAD</text>
+  <text x="37" y="160" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#B9C8DF" >Release asset</text>
+  <rect x="190" y="95" width="146" height="88" rx="10" fill="#121B33" stroke="#293957"/>
+  <text x="203" y="117" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#47C9A2" >02</text>
+  <text x="203" y="139" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="14" font-weight="700" fill="#F0F4FA" >VERIFY</text>
+  <text x="203" y="160" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#B9C8DF" >Size + SHA-256</text>
+  <rect x="24" y="210" width="146" height="88" rx="10" fill="#121B33" stroke="#293957"/>
+  <text x="37" y="232" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#47C9A2" >03</text>
+  <text x="37" y="254" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="14" font-weight="700" fill="#F0F4FA" >REPLACE</text>
+  <text x="37" y="275" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#B9C8DF" >Install new version</text>
+  <rect x="190" y="210" width="146" height="88" rx="10" fill="#121B33" stroke="#293957"/>
+  <text x="203" y="232" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#47C9A2" >04</text>
+  <text x="203" y="254" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="14" font-weight="700" fill="#F0F4FA" >RESTART</text>
+  <text x="203" y="275" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#B9C8DF" >Launch updated app</text>
+  <path d="M174 139h12m-4-4 4 4-4 4M263 188v10H97v8m-4-4 4 4 4-4M174 254h12m-4-4 4 4-4 4" fill="none" stroke="#65D6E6" stroke-width="1.5"/>
+  <text x="28" y="337" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#F59E5B" >ON INSTALL OR RESTART FAILURE</text>
+  <text x="28" y="365" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#F0F4FA" >Restore the previous version.</text>
+  <text x="28" y="389" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Keep existing settings and logs.</text>
+  <text x="28" y="443" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="10" font-weight="400" fill="#7D8FB3" letter-spacing="0.6">EXAMPLE: SHADOWPLAY NOTIFIER</text>
+</svg>
