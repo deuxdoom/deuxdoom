@@ -12,7 +12,7 @@
   <img src="assets/hero.svg" width="100%" alt="DEUXDOOM — 독립 소프트웨어 개발. 데스크톱 애플리케이션, 자동화, 개발자 유틸리티. 실용적인 소프트웨어와 세심한 설계.">
 </picture>
 
-<p><br><img src="assets/typing.svg" alt="실용적인 소프트웨어 개발 · Windows 데스크톱 앱 제작 · 자동화와 개발자 유틸리티 · 더 나은 데스크톱 경험"></p>
+<p><br><img src="assets/typing-ko.svg" alt="실용적인 소프트웨어 개발 · Windows 데스크톱 앱 제작 · 자동화와 개발자 유틸리티 · 더 나은 데스크톱 경험"></p>
 
 <p>
   <a href="#about"><b>소개</b></a> &nbsp;·&nbsp;
