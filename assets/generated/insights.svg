@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-label="Release insights: 110 releases across 8 apps, 6,021 release downloads, data as of 2026-10-29 UTC">
-  <title>Release insights: 110 releases across 8 apps, 6,021 release downloads, data as of 2026-10-29 UTC</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-label="Release insights: 110 releases across 8 apps, 6,044 release downloads, data as of 2026-10-30 UTC">
+  <title>Release insights: 110 releases across 8 apps, 6,044 release downloads, data as of 2026-10-30 UTC</title>
   <rect x=".75" y=".75" width="758.5" height="518.5" rx="18" fill="#0B1020" stroke="#263451" stroke-width="1.5"/>
   <rect x="32" y="31" width="9" height="9" fill="#65D6E6"/>
   <text x="50" y="40" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="15" letter-spacing="3" fill="#65D6E6">RELEASE INSIGHTS</text>
-  <text x="728" y="40" text-anchor="end" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3" data-as-of="2026-10-29">Data as of 2026-10-29 UTC</text>
+  <text x="728" y="40" text-anchor="end" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#7D8FB3" data-as-of="2026-10-30">Data as of 2026-10-30 UTC</text>
   <rect x="32.0" y="62" width="165.0" height="104" rx="12" fill="#121B33" stroke="#22304D"/>
   <text x="48.0" y="106" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#F0F4FA">110</text>
   <text x="48.0" y="133" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#B9C8DF" textLength="137" lengthAdjust="spacingAndGlyphs">Releases published</text>
