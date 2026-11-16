@@ -12,7 +12,10 @@
   <img src="assets/hero.svg" width="100%" alt="DEUXDOOM — 독립 소프트웨어 개발. 데스크톱 애플리케이션, 자동화, 개발자 유틸리티. 실용적인 소프트웨어와 세심한 설계.">
 </picture>
 
-<p><br><img src="assets/typing-ko.svg" alt="실용적인 소프트웨어 개발 · Windows 데스크톱 앱 제작 · 자동화와 개발자 유틸리티 · 더 나은 데스크톱 경험"></p>
+<picture>
+  <source media="(max-width: 640px)" srcset="assets/summary-ko-compact.svg">
+  <img src="assets/summary-ko.svg" width="100%" alt="분야: Windows 데스크톱 소프트웨어. 첫 배포: 2025년 8월. 주요 언어: Python, C#, C++. 활동 지역: 대한민국 서울.">
+</picture>
 
 <p>
   <a href="#about"><b>소개</b></a> &nbsp;·&nbsp;
@@ -32,13 +35,13 @@
 
 안정적인 기능, 세심한 인터페이스, 일상에서의 사용성을 중심으로 실용적인 데스크톱 애플리케이션과 개발자 유틸리티를 만듭니다.
 
-앱의 설계부터 구현, 디버깅, 배포, 유지보수까지 독립적으로 진행합니다. 2025년 8월부터 영상 다운로더, 컨트롤러 화면용 GIF 도구, 하드웨어 진단, 이미지 뷰어·편집기, 업스케일러, 트레이 유틸리티 등 Windows 앱 8개를 배포했습니다. 각 앱에는 GitHub Releases 배포본, 프로젝트 사이트, 변경 기록이 있습니다.
+앱의 설계부터 구현, 디버깅, 배포, 유지보수까지 독립적으로 진행합니다. 아래에 소개하는 Windows 앱 8개는 2025년 8월부터 배포했으며, 영상 다운로더와 이미지 뷰어·편집기부터 게임 화면 프레임 보간, 컨트롤러 진단, 스팀 전시대 도구, 트레이 유틸리티까지 아우릅니다. 각 앱에는 GitHub Releases 배포본, 프로젝트 사이트, 변경 기록이 있습니다.
 
 | 원&#8288;칙 | 소프트웨어에 반영한 방식 |
 |:--|:--|
 | **사&#8288;용&#8288;성** | 적절한 기본값, 드래그 앤 드롭 입력, 다국어 인터페이스(최대 13개 언어) |
 | **안&#8288;정&#8288;성** | SHA-256 검증과 복구 기능을 갖춘 앱 내 업데이트, 실패를 숨기지 않고 알려 주는 오류 처리 |
-| **성&#8288;능** | NVENC·Vulkan GPU 처리, 폴링 레이트 측정용 C++ 전용 스레드, 기록 검색을 1,143 ms에서 56 ms로 줄인 측정 기반 개선 |
+| **성&#8288;능** | NVENC·Vulkan·DLSS GPU 처리, 폴링 레이트 측정용 C++ 전용 스레드, 기록 검색을 1,143 ms에서 56 ms로 줄인 측정 기반 개선 |
 | **유&#8288;지&#8288;보&#8288;수** | 설정과 백업 파일을 문서화한 포터블 앱, 프로젝트별 변경 기록 |
 | **지&#8288;속&#8288;개&#8288;선** | 실제 사용과 이슈 제보를 반영한 작은 단위의 잦은 배포. 아래 [릴리스 활동](#insights)에서 확인할 수 있습니다. |
 
@@ -46,7 +49,7 @@
 
 ## 03 · 주요 소프트웨어
 
-우선순위에 따라 번호를 붙인 Windows 앱 8개입니다. 7개는 무료로 배포하는 소스 비공개 앱으로, 저장소에는 문서·변경 기록·배포 파일을 공개합니다. 나머지 1개는 MIT 라이선스의 오픈소스 포크입니다.
+우선순위에 따라 번호를 붙인 Windows 앱 8개입니다. 5개는 소스를 공개하지 않는 프리웨어로, 저장소에는 문서·변경 기록·배포 파일을 공개합니다. 3개는 MIT 또는 GPL-3.0 라이선스의 오픈소스이며, 그중 1개는 포크입니다. 각 카드의 배포 항목은 라이선스·소스 공개 여부·지원 OS 순서로 적었고, 라이선스 이름을 누르면 해당 프로젝트의 라이선스 안내로 이동합니다.
 
 <a id="tver-downloader"></a>
 
@@ -64,7 +67,7 @@ yt-dlp와 FFmpeg로 TVer 에피소드와 YouTube 영상을 저장하는 PyQt6 �
 - 네트워크 변경 시 지역 확인 재실행, 재시작 없이 전환하는 7개 UI 언어
 
 <b>기술</b>&nbsp; `Python` `PyQt6` `yt-dlp` `FFmpeg` `NVENC`<br>
-<b>배포</b>&nbsp; 프리웨어 · Windows 10/11 x64 · 소스 비공개<br>
+<b>배포</b>&nbsp; [프&#8288;리&#8288;웨&#8288;어 (개&#8288;인·비&#8288;상&#8288;업&#8288;적 사&#8288;용)](https://github.com/deuxdoom/TVerDownloader#license) · 소&#8288;스&nbsp;비&#8288;공&#8288;개 · Windows&nbsp;10/11&nbsp;x64<br>
 <b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img align="absmiddle" src="assets/generated/release-tver-downloader.svg" alt="TVer Downloader 최신 정식 릴리스"></a>
 
 [![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/TVerDownloader) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/TVerDownloader/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/TVerDownloader/)
@@ -87,56 +90,56 @@ yt-dlp와 FFmpeg로 TVer 에피소드와 YouTube 영상을 저장하는 PyQt6 �
 - 기본값은 원본 유지, CPU / NVENC H.264·H.265 변환 옵션과 SHA-256 검증 업데이트
 
 <b>기술</b>&nbsp; `Python` `PySide6` `yt-dlp` `FFmpeg` `NVENC`<br>
-<b>배포</b>&nbsp; 개인·비상업용 무료 · Windows 10/11 x64 · 소스 비공개<br>
+<b>배포</b>&nbsp; [프&#8288;리&#8288;웨&#8288;어 (개&#8288;인·비&#8288;상&#8288;업&#8288;적 사&#8288;용)](https://github.com/deuxdoom/ChzzkDownloader#license) · 소&#8288;스&nbsp;비&#8288;공&#8288;개 · Windows&nbsp;10/11&nbsp;x64<br>
 <b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img align="absmiddle" src="assets/generated/release-chzzk-downloader.svg" alt="ChzzkDownloader 최신 정식 릴리스"></a>
 
 [![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/ChzzkDownloader) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/ChzzkDownloader/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/ChzzkDownloader/)
 
 <br clear="right">
 
-<a id="shadowplay-notifier"></a>
+<a id="picvium"></a>
 
-### 03 · ShadowPlay Notifier
+### 03 · PICVIUM
 
-**보조 모니터에 크게 표시하는 녹화 상태**
+**RAW 보기와 로컬 업스케일을 지원하는 이미지 뷰어·편집기**
 
-<a href="https://github.com/deuxdoom/Shadowplay-Notifier"><img align="right" width="440" src="assets/projects/03-shadowplay-notifier.png" alt="시계·날씨·재생 중인 음악을 보여 주는 ShadowPlay Notifier 일반 화면"></a>
+<a href="https://github.com/deuxdoom/PICVIUM"><img align="right" width="440" src="assets/projects/03-picvium.png" alt="사진, 편집 도구 모음, EXIF 정보 사이드바를 보여 주는 PICVIUM 이미지 뷰어"></a>
 
-NVIDIA ShadowPlay 녹화 상태를 보조 모니터에 큰 글자로 표시합니다. 대기 중에는 시계·날씨·재생 중인 음악을 보여 주는 월페이퍼 화면으로 바뀝니다.
+사진·그래픽·카메라 RAW·문서 이미지를 한 창에서 보고, 로컬 편집·형식 변환·Real-ESRGAN 업스케일을 처리합니다. Windows 배포본에 .NET 런타임을 포함하며 포터블 설정을 지원합니다.
 
-- 녹화 폴더의 파일 증가와 쓰기 핸들로 녹화를 감지. 녹화 프로그램에 개입하지 않는 읽기 전용 방식
-- 경과 시간·파일 크기·비트레이트·파일 이름 표시, 기본 폴링 주기 0.5초 이내 갱신
-- 시계, Open-Meteo 날씨, Spotify 음악, 24밴드 오디오 시각화, 달 위상을 표시하는 대기 화면
-- 포터블 EXE 하나로 실행, 트레이에 숨긴 동안 렌더링 중단, SHA-256 검증 앱 내 업데이트
+- 폴더 썸네일, 확대·축소·이동, 애니메이션 재생, 여러 페이지 이동, EXIF 사이드바
+- 자르기·크기 변경·회전·반전과 실행 취소 / 다시 실행, 7개 이미지 형식 저장·일괄 변환
+- Vulkan GPU에서 사진·일러스트 2×·4×·8× 업스케일, 취소와 결과 비교
+- 도구 모음·아이콘 테마 사용자 지정, 명령 검색, Windows 파일 연결, 재시작 없이 전환하는 9개 UI 언어
 
-<b>기술</b>&nbsp; `Python` `Tkinter` `PyInstaller` `Open-Meteo`<br>
-<b>배포</b>&nbsp; 프리웨어 · Windows 10/11 · 소스 비공개<br>
-<b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img align="absmiddle" src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier 최신 정식 릴리스"></a>
+<b>기술</b>&nbsp; `C#` `.NET 10` `Avalonia 12` `Magick.NET` `LibRaw` `PDFium` `Real-ESRGAN / Vulkan`<br>
+<b>배포</b>&nbsp; [프&#8288;리&#8288;웨&#8288;어 (개&#8288;인·비&#8288;상&#8288;업&#8288;적 사&#8288;용)](https://github.com/deuxdoom/PICVIUM#license) · 소&#8288;스&nbsp;비&#8288;공&#8288;개 · Windows&nbsp;10/11&nbsp;x64<br>
+<b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img align="absmiddle" src="assets/generated/release-picvium.svg" alt="PICVIUM 최신 정식 릴리스"></a>
 
-[![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/Shadowplay-Notifier) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/Shadowplay-Notifier/)
+[![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/PICVIUM) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/PICVIUM/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/PICVIUM/)
 
 <br clear="right">
 
-<a id="apex-gif-maker"></a>
+<a id="frame-doubler"></a>
 
-### 04 · APEX GIF MAKER
+### 04 · FrameDoubler
 
-**Flydigi APEX 컨트롤러 화면을 위한 MP4-to-GIF 도구**
+**캡처 카드의 게임 화면을 부드럽게 표시·녹화하는 Windows 앱**
 
-<a href="https://github.com/deuxdoom/APEXGIFMAKER"><img align="right" width="440" src="assets/projects/04-apex-gif-maker.png" alt="시작·끝 미리보기, 구간 타임라인, GIF 출력 옵션을 보여 주는 APEX GIF MAKER"></a>
+<a href="https://github.com/deuxdoom/FrameDoubler"><img align="right" width="440" src="assets/projects/04-frame-doubler.png" alt="4K 콘솔 게임 캡처 미리보기, NVIDIA DLSS 프레임 생성 설정, 미리보기 통계를 보여 주는 FrameDoubler 화면"></a>
 
-영상의 원하는 순간을 APEX 4·5·6 등 Flydigi APEX 시리즈 컨트롤러의 내장 화면 크기에 맞는 GIF로 만듭니다. 모든 처리는 로컬 PC에서 이루어집니다.
+캡처 카드로 받은 콘솔 게임 화면에 실시간 프레임 생성을 적용해 표시·녹화합니다. 파일은 60fps지만 실제 움직임은 30fps인 녹화 파일도 RIFE 보간으로 실제 60fps 움직임으로 바꿉니다.
 
-- 트림 핸들, 확대 가능한 타임라인, 시간 직접 입력으로 정밀한 구간 선택
-- 기본 출력 160×80·12 fps, 채우기·레터박스·늘리기와 자르기 미리보기
-- 적응형 팔레트·디더링, 균일 프레임 또는 중복 프레임 제거 모드 등 GIF 품질 옵션
-- FFmpeg 자동 관리, SHA-256 검증 업데이트, 6개 UI 언어와 다크 / 라이트 테마
+- 중복 프레임을 먼저 걷어 내 실제 움직임을 복원한 뒤 ncnn·Vulkan에서 Practical-RIFE 4.25 / 4.26으로 보간, 장면 전환과 정지 화면은 보간하지 않음
+- 실시간 미리보기는 NVIDIA DLSS 프레임 생성을 우선 사용하고 NVIDIA VFX(최대 4배)로 대체, SMAA 안티앨리어싱과 HDR → SDR 톤 매핑
+- 짧은 실제 인코딩으로 확인한 NVENC·AMF·QSV·소프트웨어 인코더(H.264·HEVC·AV1), YouTube 프리셋, 선택형 동기 검증
+- 짧은 시험 처리로 계산한 예상 소요 시간, 일괄 대기열, 명령줄 도구, 실패 시 이전 설치로 되돌리는 SHA-256 검증 업데이트
 
-<b>기술</b>&nbsp; `Python` `PySide6` `FFmpeg`<br>
-<b>배포</b>&nbsp; 프리웨어 · Windows 10/11 x64 · 소스 비공개<br>
-<b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img align="absmiddle" src="assets/generated/release-apex-gif-maker.svg" alt="APEX GIF MAKER 최신 정식 릴리스"></a>
+<b>기술</b>&nbsp; `C#` `.NET 10` `WPF` `C++` `RIFE` `ncnn / Vulkan` `FFmpeg`<br>
+<b>배포</b>&nbsp; [오&#8288;픈&#8288;소&#8288;스 (MIT)](https://github.com/deuxdoom/FrameDoubler#license) · 소&#8288;스&nbsp;공&#8288;개 · Windows&nbsp;11&nbsp;x64<br>
+<b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img align="absmiddle" src="assets/generated/release-frame-doubler.svg" alt="FrameDoubler 최신 정식 릴리스"></a>
 
-[![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/APEXGIFMAKER) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/APEXGIFMAKER/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/APEXGIFMAKER/)
+[![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/FrameDoubler) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/FrameDoubler/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/FrameDoubler/)
 
 <br clear="right">
 
@@ -156,56 +159,56 @@ gamepad-tester.com·Gamepadla와 같은 방식으로 스틱 원형도와 폴링 
 - DualSense USB 1000 Hz 폴링 설정, 800×400 결과 카드, SHA-256 검증 업데이트
 
 <b>기술</b>&nbsp; `Python` `PySide6` `C++20` `SDL3` `XInput` `HID`<br>
-<b>배포</b>&nbsp; 프리웨어 · Windows 10/11 · 소스 비공개<br>
+<b>배포</b>&nbsp; [프&#8288;리&#8288;웨&#8288;어 (개&#8288;인·업&#8288;무 용&#8288;도 무&#8288;료)](https://github.com/deuxdoom/GamePadTester#license) · 소&#8288;스&nbsp;비&#8288;공&#8288;개 · Windows&nbsp;10/11<br>
 <b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img align="absmiddle" src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester 최신 정식 릴리스"></a>
 
 [![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/GamePadTester) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/GamePadTester/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/GamePadTester/)
 
 <br clear="right">
 
-<a id="picvium"></a>
+<a id="steam-slice"></a>
 
-### 06 · PICVIUM
+### 06 · SteamSlice
 
-**RAW 보기와 로컬 업스케일을 지원하는 이미지 뷰어·편집기**
+**GIF와 동영상으로 만드는 스팀 프로필 전시대 애니메이션**
 
-<a href="https://github.com/deuxdoom/PICVIUM"><img align="right" width="440" src="assets/projects/06-picvium.png" alt="사진, 편집 도구 모음, EXIF 정보 사이드바를 보여 주는 PICVIUM 이미지 뷰어"></a>
+<a href="https://github.com/deuxdoom/SteamSlice"><img align="right" width="440" src="assets/projects/06-steam-slice.png" alt="다섯 조각으로 나눈 미리보기, 조각 용량, 스팀 등록 안내를 보여 주는 SteamSlice 메인 화면"></a>
 
-사진·그래픽·카메라 RAW·문서 이미지를 한 창에서 보고, 로컬 편집·형식 변환·Real-ESRGAN 업스케일을 처리합니다. Windows 배포본에 .NET 런타임을 포함하며 포터블 설정을 지원합니다.
+GIF나 동영상 구간을 스팀 프로필 창작마당 전시대의 다섯 칸에 이어지는 애니메이션 조각으로 만듭니다. 모든 미디어 처리는 로컬 PC에서 이루어집니다.
 
-- 폴더 썸네일, 확대·축소·이동, 애니메이션 재생, 여러 페이지 이동, EXIF 사이드바
-- 자르기·크기 변경·회전·반전과 실행 취소 / 다시 실행, 7개 이미지 형식 저장·일괄 변환
-- Vulkan GPU에서 사진·일러스트 2×·4×·8× 업스케일, 취소와 결과 비교
-- 도구 모음·아이콘 테마 사용자 지정, 명령 검색, Windows 파일 연결, 재시작 없이 전환하는 9개 UI 언어
+- GIF·MP4·MKV·MOV·WebM 등 4K까지 입력, 동영상은 0.2–30초 구간을 끌어서 고르고 25·20·10 fps로 출력
+- 폭 188px·간격 4px의 5분할(16:9 기준 188×537), Gifsicle 압축으로 조각당 5,000,000바이트 이하
+- 스팀 아트워크 업로드 페이지 열기와 Console 명령어 복사를 제공하는 등록 안내, 조각은 1 → 5 순서로 직접 업로드
+- 밝은 / 어두운 테마, 트레이, 단일 실행, 실패 시 이전 파일로 복원하는 SHA-256 검증 업데이트
 
-<b>기술</b>&nbsp; `C#` `.NET 10` `Avalonia 12` `Magick.NET` `LibRaw` `PDFium` `Real-ESRGAN / Vulkan`<br>
-<b>배포</b>&nbsp; 개인·비상업용 무료 · Windows 10/11 x64 · 소스 비공개<br>
-<b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img align="absmiddle" src="assets/generated/release-picvium.svg" alt="PICVIUM 최신 정식 릴리스"></a>
+<b>기술</b>&nbsp; `Python` `PyQt6` `Gifsicle` `FFmpeg` `PyInstaller`<br>
+<b>배포</b>&nbsp; [오&#8288;픈&#8288;소&#8288;스 (GPL-3.0)](https://github.com/deuxdoom/SteamSlice#license) · 소&#8288;스&nbsp;공&#8288;개 · Windows&nbsp;10/11&nbsp;x64<br>
+<b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img align="absmiddle" src="assets/generated/release-steam-slice.svg" alt="SteamSlice 최신 정식 릴리스"></a>
 
-[![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/PICVIUM) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/PICVIUM/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/PICVIUM/)
+[![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/SteamSlice) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/SteamSlice/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/SteamSlice/)
 
 <br clear="right">
 
-<a id="image-upscaler"></a>
+<a id="shadowplay-notifier"></a>
 
-### 07 · ImageUpscaler
+### 07 · ShadowPlay Notifier
 
-**포터블·오프라인 AI 이미지 업스케일러**
+**보조 모니터에 크게 표시하는 녹화 상태**
 
-<a href="https://github.com/deuxdoom/ImageUpscaler"><img align="right" width="440" src="assets/projects/07-image-upscaler.png" alt="이미지 목록, 전후 비교 슬라이더, 확대 설정을 보여 주는 ImageUpscaler"></a>
+<a href="https://github.com/deuxdoom/Shadowplay-Notifier"><img align="right" width="440" src="assets/projects/07-shadowplay-notifier.png" alt="시계·날씨·재생 중인 음악을 보여 주는 ShadowPlay Notifier 일반 화면"></a>
 
-사진·일러스트·투명 이미지·픽셀 아트를 로컬 PC에서 최대 8×로 확대합니다. 포터블 EXE 하나에 Real-ESRGAN 모델, 코덱, 런타임을 포함합니다.
+NVIDIA ShadowPlay 녹화 상태를 보조 모니터에 큰 글자로 표시합니다. 대기 중에는 시계·날씨·재생 중인 음악을 보여 주는 월페이퍼 화면으로 바뀝니다.
 
-- 사진 AI(Real-ESRGAN x4plus), 이미지 AI(x4plus-anime), 선형광 Lanczos, 픽셀 아트용 정수배 최근접 보간의 4가지 모드
-- PNG·JPG·WebP·AVIF 2×·4×·8× 출력, 알파를 별도로 확대해 투명도 보존
-- 일괄 처리 목록, 확대 가능한 전후 비교 슬라이더
-- Vulkan 지원 여부 확인과 명시적인 대체 처리, SHA-256 검증 업데이트
+- 녹화 폴더의 파일 증가와 쓰기 핸들로 녹화를 감지. 녹화 프로그램에 개입하지 않는 읽기 전용 방식
+- 경과 시간·파일 크기·비트레이트·파일 이름 표시, 기본 폴링 주기 0.5초 이내 갱신
+- 시계, Open-Meteo 날씨, Spotify 음악, 24밴드 오디오 시각화, 달 위상을 표시하는 대기 화면
+- 포터블 EXE 하나로 실행, 트레이에 숨긴 동안 렌더링 중단, SHA-256 검증 앱 내 업데이트
 
-<b>기술</b>&nbsp; `C#` `.NET 8` `Windows Forms` `SkiaSharp` `Magick.NET` `Real-ESRGAN (ncnn / Vulkan)`<br>
-<b>배포</b>&nbsp; 무료 배포 · Windows 10/11 x64 · 소스 비공개<br>
-<b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img align="absmiddle" src="assets/generated/release-image-upscaler.svg" alt="ImageUpscaler 최신 정식 릴리스"></a>
+<b>기술</b>&nbsp; `Python` `Tkinter` `PyInstaller` `Open-Meteo`<br>
+<b>배포</b>&nbsp; [프&#8288;리&#8288;웨&#8288;어 (개&#8288;인·업&#8288;무 용&#8288;도 무&#8288;료)](https://github.com/deuxdoom/Shadowplay-Notifier#license) · 소&#8288;스&nbsp;비&#8288;공&#8288;개 · Windows&nbsp;10/11<br>
+<b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img align="absmiddle" src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier 최신 정식 릴리스"></a>
 
-[![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/ImageUpscaler) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/ImageUpscaler/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/ImageUpscaler/)
+[![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/Shadowplay-Notifier) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/Shadowplay-Notifier/)
 
 <br clear="right">
 
@@ -225,14 +228,14 @@ Claude와 Codex 사용 한도를 실시간으로 보여 주는 가벼운 트레�
 - 포터블 단일 EXE, 13개 언어, 이벤트 명령, 복구 기능을 갖춘 앱 내 업데이트
 
 <b>기술</b>&nbsp; `Python` `pywebview` `pystray` `PyInstaller` `C#`<br>
-<b>배포</b>&nbsp; 오픈소스(MIT) · jens-duttke/usage-monitor-for-claude의 포크 · Windows 10/11 x64<br>
+<b>배포</b>&nbsp; [오&#8288;픈&#8288;소&#8288;스 (MIT)](https://github.com/deuxdoom/usage-monitor-for-claude#license) · 소&#8288;스&nbsp;공&#8288;개 · Windows&nbsp;10/11&nbsp;x64<br>
 <b>최신 버전</b>&nbsp; <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img align="absmiddle" src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor 최신 정식 릴리스"></a>
 
 [![저장소](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/usage-monitor-for-claude) [![다운로드](assets/ui/btn-download.svg)](https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest) [![웹사이트](assets/ui/btn-website.svg)](https://deuxdoom.github.io/usage-monitor-for-claude/)
 
 <br clear="right">
 
-<sub>TVer, CHZZK, NVIDIA ShadowPlay, Flydigi APEX, DualSense, Claude, Codex는 각 소유자의 상표입니다. 여기에 소개한 앱은 독립적으로 제작한 프로젝트이며, 해당 기업과 제휴하거나 공식 승인을 받은 제품이 아닙니다.</sub>
+<sub>TVer, CHZZK, NVIDIA ShadowPlay, NVIDIA DLSS, DualSense, Steam, Claude, Codex는 각 소유자의 상표입니다. 여기에 소개한 앱은 독립적으로 제작한 프로젝트이며, 해당 기업과 제휴하거나 공식 승인을 받은 제품이 아닙니다.</sub>
 
 <a id="toolbox"></a>
 
@@ -242,10 +245,10 @@ Claude와 Codex 사용 한도를 실시간으로 보여 주는 가벼운 트레�
 
 | 분야 | 기술 |
 |:--|:--|
-| **언어** | ![Python](https://img.shields.io/badge/Python-172440?style=flat-square&logo=python&logoColor=65D6E6) ![C#](https://img.shields.io/badge/C%23-172440?style=flat-square) ![C++](https://img.shields.io/badge/C%2B%2B-172440?style=flat-square&logo=cplusplus&logoColor=65D6E6) ![JavaScript](https://img.shields.io/badge/JavaScript-172440?style=flat-square&logo=javascript&logoColor=65D6E6)<br><sub>Python 01–05, 08 · C# 06–08 · C++20 측정 코어 05 · 프로젝트 사이트와 08 팝업 UI의 JavaScript / HTML / CSS</sub> |
-| **데&#8288;스&#8288;크&#8288;톱<br>런&#8288;타&#8288;임** | ![PySide6](https://img.shields.io/badge/PySide6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![PyQt6](https://img.shields.io/badge/PyQt6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![Tkinter](https://img.shields.io/badge/Tkinter-172440?style=flat-square) ![Avalonia](https://img.shields.io/badge/Avalonia-172440?style=flat-square) ![Windows Forms](https://img.shields.io/badge/Windows_Forms-172440?style=flat-square) ![pywebview](https://img.shields.io/badge/pywebview-172440?style=flat-square) ![.NET 8](https://img.shields.io/badge/.NET_8-172440?style=flat-square&logo=dotnet&logoColor=65D6E6) ![.NET 10](https://img.shields.io/badge/.NET_10-172440?style=flat-square&logo=dotnet&logoColor=65D6E6) ![PyInstaller](https://img.shields.io/badge/PyInstaller-172440?style=flat-square)<br><sub>PySide6 02, 04, 05 · PyQt6 01 · Tkinter 03 · Avalonia 12 / .NET 10 06 · Windows Forms / .NET 8 07 · pywebview·pystray 08 · PyInstaller 단일 EXE 03, 08</sub> |
-| **미&#8288;디&#8288;어<br>이&#8288;미&#8288;지** | ![FFmpeg](https://img.shields.io/badge/FFmpeg-172440?style=flat-square&logo=ffmpeg&logoColor=65D6E6) ![yt-dlp](https://img.shields.io/badge/yt--dlp-172440?style=flat-square) ![NVIDIA NVENC](https://img.shields.io/badge/NVIDIA_NVENC-172440?style=flat-square&logo=nvidia&logoColor=65D6E6) ![Real-ESRGAN](https://img.shields.io/badge/Real--ESRGAN-172440?style=flat-square) ![Vulkan](https://img.shields.io/badge/Vulkan-172440?style=flat-square&logo=vulkan&logoColor=65D6E6) ![SkiaSharp](https://img.shields.io/badge/SkiaSharp-172440?style=flat-square) ![Magick.NET](https://img.shields.io/badge/Magick.NET-172440?style=flat-square) ![LibRaw](https://img.shields.io/badge/LibRaw-172440?style=flat-square) ![PDFium](https://img.shields.io/badge/PDFium-172440?style=flat-square)<br><sub>FFmpeg 01, 02, 04 · yt-dlp 01, 02 · NVENC 인코딩 01, 02 · Real-ESRGAN / Vulkan·Magick.NET 06, 07 · SkiaSharp·ncnn 07 · LibRaw·PDFium 06</sub> |
-| **입&#8288;력<br>하&#8288;드&#8288;웨&#8288;어** | ![SDL3](https://img.shields.io/badge/SDL3-172440?style=flat-square) ![XInput](https://img.shields.io/badge/XInput-172440?style=flat-square) ![Raw HID](https://img.shields.io/badge/Raw_HID-172440?style=flat-square)<br><sub>05의 컨트롤러 입력·폴링 레이트 측정·진동 제어</sub> |
+| **언어** | ![Python](https://img.shields.io/badge/Python-172440?style=flat-square&logo=python&logoColor=65D6E6) ![C#](https://img.shields.io/badge/C%23-172440?style=flat-square) ![C++](https://img.shields.io/badge/C%2B%2B-172440?style=flat-square&logo=cplusplus&logoColor=65D6E6) ![JavaScript](https://img.shields.io/badge/JavaScript-172440?style=flat-square&logo=javascript&logoColor=65D6E6)<br><sub>Python 01, 02, 05–08 · C# 03, 04, 08 · C++ 프레임 엔진 04와 C++20 측정 코어 05 · 프로젝트 사이트와 08 팝업 UI의 JavaScript / HTML / CSS</sub> |
+| **데&#8288;스&#8288;크&#8288;톱<br>런&#8288;타&#8288;임** | ![PySide6](https://img.shields.io/badge/PySide6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![PyQt6](https://img.shields.io/badge/PyQt6-172440?style=flat-square&logo=qt&logoColor=65D6E6) ![Tkinter](https://img.shields.io/badge/Tkinter-172440?style=flat-square) ![Avalonia](https://img.shields.io/badge/Avalonia-172440?style=flat-square) ![WPF](https://img.shields.io/badge/WPF-172440?style=flat-square) ![pywebview](https://img.shields.io/badge/pywebview-172440?style=flat-square) ![.NET 10](https://img.shields.io/badge/.NET_10-172440?style=flat-square&logo=dotnet&logoColor=65D6E6) ![PyInstaller](https://img.shields.io/badge/PyInstaller-172440?style=flat-square)<br><sub>PySide6 02, 05 · PyQt6 01, 06 · Tkinter 07 · Avalonia 12 / .NET 10 03 · WPF / .NET 10 04 · pywebview·pystray 08 · PyInstaller 패키징 06–08</sub> |
+| **미&#8288;디&#8288;어<br>이&#8288;미&#8288;지** | ![FFmpeg](https://img.shields.io/badge/FFmpeg-172440?style=flat-square&logo=ffmpeg&logoColor=65D6E6) ![yt-dlp](https://img.shields.io/badge/yt--dlp-172440?style=flat-square) ![NVIDIA NVENC](https://img.shields.io/badge/NVIDIA_NVENC-172440?style=flat-square&logo=nvidia&logoColor=65D6E6) ![RIFE](https://img.shields.io/badge/RIFE-172440?style=flat-square) ![Real-ESRGAN](https://img.shields.io/badge/Real--ESRGAN-172440?style=flat-square) ![Vulkan](https://img.shields.io/badge/Vulkan-172440?style=flat-square&logo=vulkan&logoColor=65D6E6) ![Magick.NET](https://img.shields.io/badge/Magick.NET-172440?style=flat-square) ![LibRaw](https://img.shields.io/badge/LibRaw-172440?style=flat-square) ![PDFium](https://img.shields.io/badge/PDFium-172440?style=flat-square) ![Gifsicle](https://img.shields.io/badge/Gifsicle-172440?style=flat-square)<br><sub>FFmpeg 01, 02, 04, 06 · yt-dlp 01, 02 · NVENC 인코딩 01, 02, 04 · ncnn / Vulkan 기반 RIFE와 NVIDIA DLSS / VFX 프레임 생성 04 · Real-ESRGAN / Vulkan·Magick.NET·LibRaw·PDFium 03 · Gifsicle 06</sub> |
+| **입&#8288;력<br>하&#8288;드&#8288;웨&#8288;어** | ![SDL3](https://img.shields.io/badge/SDL3-172440?style=flat-square) ![XInput](https://img.shields.io/badge/XInput-172440?style=flat-square) ![Raw HID](https://img.shields.io/badge/Raw_HID-172440?style=flat-square)<br><sub>05의 컨트롤러 입력·폴링 레이트 측정·진동 제어 · 04의 Media Foundation / DirectShow 캡처 카드 입력</sub> |
 | **배&#8288;포<br>개&#8288;발&nbsp;도&#8288;구** | ![Git](https://img.shields.io/badge/Git-172440?style=flat-square&logo=git&logoColor=65D6E6) ![GitHub Releases](https://img.shields.io/badge/GitHub_Releases-172440?style=flat-square&logo=github&logoColor=65D6E6) ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-172440?style=flat-square&logo=githubpages&logoColor=65D6E6) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-172440?style=flat-square&logo=githubactions&logoColor=65D6E6) ![VS Code](https://img.shields.io/badge/VS_Code-172440?style=flat-square)<br><sub>모든 앱을 GitHub Releases로 배포하고 GitHub Pages 사이트를 운영합니다. 프로필 데이터는 GitHub Actions로 갱신합니다.</sub> |
 
 <a id="insights"></a>
@@ -266,11 +269,11 @@ Claude와 Codex 사용 한도를 실시간으로 보여 주는 가벼운 트레�
 |:--|:--|
 | **01 · [TVer Downloader](https://github.com/deuxdoom/TVerDownloader)** | <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/release-tver-downloader.svg" alt="TVer Downloader 최신 릴리스"></a> |
 | **02 · [ChzzkDownloader](https://github.com/deuxdoom/ChzzkDownloader)** | <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/release-chzzk-downloader.svg" alt="ChzzkDownloader 최신 릴리스"></a> |
-| **03 · [ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)** | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier 최신 릴리스"></a> |
-| **04 · [APEX GIF MAKER](https://github.com/deuxdoom/APEXGIFMAKER)** | <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/release-apex-gif-maker.svg" alt="APEX GIF MAKER 최신 릴리스"></a> |
+| **03 · [PICVIUM](https://github.com/deuxdoom/PICVIUM)** | <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/release-picvium.svg" alt="PICVIUM 최신 릴리스"></a> |
+| **04 · [FrameDoubler](https://github.com/deuxdoom/FrameDoubler)** | <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/release-frame-doubler.svg" alt="FrameDoubler 최신 릴리스"></a> |
 | **05 · [GamePadTester](https://github.com/deuxdoom/GamePadTester)** | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester 최신 릴리스"></a> |
-| **06 · [PICVIUM](https://github.com/deuxdoom/PICVIUM)** | <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/release-picvium.svg" alt="PICVIUM 최신 릴리스"></a> |
-| **07 · [ImageUpscaler](https://github.com/deuxdoom/ImageUpscaler)** | <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/release-image-upscaler.svg" alt="ImageUpscaler 최신 릴리스"></a> |
+| **06 · [SteamSlice](https://github.com/deuxdoom/SteamSlice)** | <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/release-steam-slice.svg" alt="SteamSlice 최신 릴리스"></a> |
+| **07 · [ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)** | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier 최신 릴리스"></a> |
 | **08 · [AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)** | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor 최신 릴리스"></a> |
 
 <sub>각 저장소의 GitHub Releases에서 초안·사전 배포를 제외한 최신 정식 릴리스를 읽습니다. 더 최신인 사전 배포가 있으면 배지에 함께 표시하고, 릴리스가 없으면 “No published release”로 표시합니다. 6시간마다 갱신합니다.</sub>
@@ -304,7 +307,7 @@ Claude와 Codex 사용 한도를 실시간으로 보여 주는 가벼운 트레�
 - **후원** · [GitHub Sponsors](https://github.com/sponsors/deuxdoom)
 - **피드백** · 버그 제보와 기능 제안은 각 프로젝트의 Issues에서 받습니다.
 
-**프로젝트 사이트** · [TVer Downloader](https://deuxdoom.github.io/TVerDownloader/) · [ChzzkDownloader](https://deuxdoom.github.io/ChzzkDownloader/) · [ShadowPlay Notifier](https://deuxdoom.github.io/Shadowplay-Notifier/) · [APEX GIF MAKER](https://deuxdoom.github.io/APEXGIFMAKER/) · [GamePadTester](https://deuxdoom.github.io/GamePadTester/) · [PICVIUM](https://deuxdoom.github.io/PICVIUM/) · [ImageUpscaler](https://deuxdoom.github.io/ImageUpscaler/) · [AI Agents Usage Monitor](https://deuxdoom.github.io/usage-monitor-for-claude/)
+**프로젝트 사이트** · [TVer Downloader](https://deuxdoom.github.io/TVerDownloader/) · [ChzzkDownloader](https://deuxdoom.github.io/ChzzkDownloader/) · [PICVIUM](https://deuxdoom.github.io/PICVIUM/) · [FrameDoubler](https://deuxdoom.github.io/FrameDoubler/) · [GamePadTester](https://deuxdoom.github.io/GamePadTester/) · [SteamSlice](https://deuxdoom.github.io/SteamSlice/) · [ShadowPlay Notifier](https://deuxdoom.github.io/Shadowplay-Notifier/) · [AI Agents Usage Monitor](https://deuxdoom.github.io/usage-monitor-for-claude/)
 
 <br>
 

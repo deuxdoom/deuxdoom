@@ -33,7 +33,7 @@
   <text x="40" y="606" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Real-ESRGAN, 2x / 4x / 8x</text>
   <text x="40" y="627" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Compare before saving</text>
   <path d="M40 675H320" stroke="#293957"/>
-  <text x="40" y="695" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#00C8FF" >06 / PICVIUM</text>
+  <text x="40" y="695" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#00C8FF" >03 / PICVIUM</text>
   <rect x="22" y="728" width="316" height="284" rx="13" fill="#121B33" stroke="#293957"/>
   <rect x="23" y="746" width="3" height="29" rx="1.5" fill="#47C9A2"/>
   <text x="40" y="758" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" fill="#47C9A2" letter-spacing="0.7">RELIABLE DELIVERY</text>
@@ -45,6 +45,6 @@
   <text x="40" y="908" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >User settings preserved</text>
   <text x="40" y="929" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#B9C8DF" >Restore on update failure</text>
   <path d="M40 977H320" stroke="#293957"/>
-  <text x="40" y="997" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#47C9A2" >03 / ShadowPlay Notifier</text>
+  <text x="40" y="997" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#47C9A2" >07 / ShadowPlay Notifier</text>
   <text x="28" y="1073" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="10" font-weight="400" fill="#7D8FB3" letter-spacing="1">PROJECT DETAILS LINKED BELOW</text>
 </svg>

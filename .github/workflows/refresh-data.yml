@@ -62,19 +62,19 @@ jobs:
               },
               {
                 "no": "03",
-                "repo": "Shadowplay-Notifier",
-                "name": "ShadowPlay Notifier",
-                "slug": "shadowplay-notifier",
-                "accent": "#F2626B",
-                "cover": ["assets/wallpaper.png"]
+                "repo": "PICVIUM",
+                "name": "PICVIUM",
+                "slug": "picvium",
+                "accent": "#00C8FF",
+                "cover": ["docs/assets/screens/viewer-photo.webp"]
               },
               {
                 "no": "04",
-                "repo": "APEXGIFMAKER",
-                "name": "APEX GIF MAKER",
-                "slug": "apex-gif-maker",
-                "accent": "#A78BFA",
-                "cover": ["docs/images/main.png"]
+                "repo": "FrameDoubler",
+                "name": "FrameDoubler",
+                "slug": "frame-doubler",
+                "accent": "#FF6B3D",
+                "cover": ["docs/img/screenshot-en.png"]
               },
               {
                 "no": "05",
@@ -86,19 +86,19 @@ jobs:
               },
               {
                 "no": "06",
-                "repo": "PICVIUM",
-                "name": "PICVIUM",
-                "slug": "picvium",
-                "accent": "#00C8FF",
-                "cover": ["docs/assets/screens/viewer.png"]
+                "repo": "SteamSlice",
+                "name": "SteamSlice",
+                "slug": "steam-slice",
+                "accent": "#A78BFA",
+                "cover": ["assets/main-window.png"]
               },
               {
                 "no": "07",
-                "repo": "ImageUpscaler",
-                "name": "ImageUpscaler",
-                "slug": "image-upscaler",
-                "accent": "#C084FC",
-                "cover": ["docs/site/media/app-comparison.png"]
+                "repo": "Shadowplay-Notifier",
+                "name": "ShadowPlay Notifier",
+                "slug": "shadowplay-notifier",
+                "accent": "#F2626B",
+                "cover": ["assets/wallpaper.png"]
               },
               {
                 "no": "08",
