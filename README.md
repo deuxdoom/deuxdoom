@@ -265,27 +265,27 @@ Technologies that ship in the releases above, grouped by area. The numbers refer
 
 ## 06 · Latest Software Releases
 
-Every public repository I created and ship through GitHub Releases, not only the eight featured above, with the most recently updated first. Forks and other people's projects are left out; the one exception is 08, an extended fork with its own releases.
+Every public repository I created and ship through GitHub Releases, not only the eight featured above, with the most recently updated first. A number on a card marks a featured project. Forks and other people's projects are left out; the one exception is 08, an extended fork with its own releases.
 
 <!-- releases:start -->
-| Project | Latest stable release · date (UTC) |
-|:--|:--|
-| **[SteamSlice](https://github.com/deuxdoom/SteamSlice)** | <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/release-steam-slice.svg" alt="SteamSlice latest release"></a> |
-| **[FrameDoubler](https://github.com/deuxdoom/FrameDoubler)** | <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/release-frame-doubler.svg" alt="FrameDoubler latest release"></a> |
-| **[TVer Downloader](https://github.com/deuxdoom/TVerDownloader)** | <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/release-tver-downloader.svg" alt="TVer Downloader latest release"></a> |
-| **[ChzzkDownloader](https://github.com/deuxdoom/ChzzkDownloader)** | <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/release-chzzk-downloader.svg" alt="ChzzkDownloader latest release"></a> |
-| **[AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)** | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor latest release"></a> |
-| **[GamePadTester](https://github.com/deuxdoom/GamePadTester)** | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester latest release"></a> |
-| **[ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)** | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier latest release"></a> |
-| **[PICVIUM](https://github.com/deuxdoom/PICVIUM)** | <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/release-picvium.svg" alt="PICVIUM latest release"></a> |
-| **[ShellTidy](https://github.com/deuxdoom/ShellTidy)** | <a href="https://github.com/deuxdoom/ShellTidy/releases/latest"><img src="assets/generated/release-shell-tidy.svg" alt="ShellTidy latest release"></a> |
-| **[PARANORMASIGHT-KR-Patch](https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch)** | <a href="https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch/releases/latest"><img src="assets/generated/release-paranormasight-kr-patch.svg" alt="PARANORMASIGHT-KR-Patch latest release"></a> |
-| **[ImageUpscaler](https://github.com/deuxdoom/ImageUpscaler)** | <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/release-image-upscaler.svg" alt="ImageUpscaler latest release"></a> |
-| **[APEX GIF MAKER](https://github.com/deuxdoom/APEXGIFMAKER)** | <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/release-apexgifmaker.svg" alt="APEX GIF MAKER latest release"></a> |
-| **[VideoBatchConverter](https://github.com/deuxdoom/VideoBatchConverter)** | <a href="https://github.com/deuxdoom/VideoBatchConverter/releases/latest"><img src="assets/generated/release-video-batch-converter.svg" alt="VideoBatchConverter latest release"></a> |
+
+<a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/releases/steam-slice.svg" width="276" alt="SteamSlice: latest release v1.0.1, 2026-11-16 (UTC)"></a>
+<a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/releases/frame-doubler.svg" width="276" alt="FrameDoubler: latest release v2.0.1, 2026-11-16 (UTC)"></a>
+<a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/releases/tver-downloader.svg" width="276" alt="TVer Downloader: latest release v4.5.4, 2026-11-11 (UTC)"></a>
+<a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/releases/chzzk-downloader.svg" width="276" alt="ChzzkDownloader: latest release v1.0.9, 2026-11-08 (UTC)"></a>
+<a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/releases/ai-agents-usage-monitor.svg" width="276" alt="AI Agents Usage Monitor: latest release v3.9.0, 2026-11-05 (UTC)"></a>
+<a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/releases/gamepad-tester.svg" width="276" alt="GamePadTester: latest release v3.2.2, 2026-11-05 (UTC)"></a>
+<a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/releases/shadowplay-notifier.svg" width="276" alt="ShadowPlay Notifier: latest release v2.7.3, 2026-11-05 (UTC)"></a>
+<a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/releases/picvium.svg" width="276" alt="PICVIUM: latest release v1.0.6, 2026-11-02 (UTC)"></a>
+<a href="https://github.com/deuxdoom/ShellTidy/releases/latest"><img src="assets/generated/releases/shell-tidy.svg" width="276" alt="ShellTidy: latest release v0.0.2, 2026-10-27 (UTC)"></a>
+<a href="https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch/releases/latest"><img src="assets/generated/releases/paranormasight-kr-patch.svg" width="276" alt="PARANORMASIGHT-KR-Patch: latest release file23-v1.0.0, 2026-10-25 (UTC)"></a>
+<a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/releases/image-upscaler.svg" width="276" alt="ImageUpscaler: latest release v1.0.1, 2026-10-14 (UTC)"></a>
+<a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/releases/apexgifmaker.svg" width="276" alt="APEX GIF MAKER: latest release v3.1.0, 2026-09-29 (UTC)"></a>
+<a href="https://github.com/deuxdoom/VideoBatchConverter/releases/latest"><img src="assets/generated/releases/video-batch-converter.svg" width="276" alt="VideoBatchConverter: latest release v2.0.0, 2025-09-16 (UTC)"></a>
+
 <!-- releases:end -->
 
-<sub>Read from each repository's GitHub Releases: the newest published release that is not a draft or pre-release, sorted by the date shown. A newer pre-release, if one exists, appears as an extra segment. The list is rebuilt every six hours, so a new public repository appears after its first release.</sub>
+<sub>Each card shows the newest published release that is not a draft or pre-release, with its date in UTC, and links to that release. A newer pre-release, if one exists, appears in the top-right corner. The cards are rebuilt every six hours, so a new public repository appears after its first release.</sub>
 
 <a id="engineering"></a>
 

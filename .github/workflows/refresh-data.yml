@@ -126,15 +126,17 @@ jobs:
               python scripts/update_insights.py
 
           Outputs (generated, do not edit by hand):
-              assets/generated/release-<slug>.svg   latest stable release + date per repository
+              assets/generated/release-<slug>.svg   latest stable release + date (featured project cards)
+              assets/generated/releases/<slug>.svg  release card for the 06 grid, one per listed repository
               assets/generated/insights.svg         totals and monthly release activity (featured projects)
-              README.md, README.ko.md               only the release table between the
+              README.md, README.ko.md               only the release grid between the
                                                     <!-- releases:start --> / <!-- releases:end --> markers
 
-          The release table lists the featured projects plus every other public, non-fork
+          The release grid lists the featured projects plus every other public, non-fork
           repository of the owner that has at least one published release, newest
-          release first (by the date shown on its badge). Badges of repositories that
-          drop out of the table are removed.
+          release first (by the date shown on its card). Cards are 276 px wide so they
+          wrap into 3 columns on desktop and 1 on phones without being scaled down.
+          Generated files of repositories that drop out of the grid are removed.
 
           Only the public GitHub REST API is used. GITHUB_TOKEN is optional and only
           raises the rate limit. Every request is made before any file is written: if a
@@ -352,6 +354,62 @@ jobs:
           """
 
 
+          # --------------------------------------------------------------------------- release card (06 grid)
+
+          CARD_W, CARD_H = 276, 64   # 3 per row in the 846 px desktop README, 1 per row at phone width (308 px)
+          CARD_SANS = "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
+          CARD_NEUTRAL = "#5D6F93"   # accent bar of repositories that are not featured
+
+
+          def release_card(project: dict) -> str:
+              stable, pre, no = project["stable"], project["pre"], project.get("no")
+              accent = project.get("accent", CARD_NEUTRAL)
+              parts: list[str] = []
+
+              # top right: a newer pre-release wins over the featured number
+              tag_w = 0.0
+              if pre:
+                  tag = f"pre {version(pre['tag'])}"
+                  tag_w = min(text_width(tag, 11), 120)
+                  squeeze = f' textLength="{tag_w:.0f}" lengthAdjust="spacingAndGlyphs"' if text_width(tag, 11) > 120 else ""
+                  parts.append(f'<text x="{CARD_W - 14}" y="26" text-anchor="end" font-family="{MONO}" font-size="11" fill="#C8B8FF"{squeeze}>{escape(tag)}</text>')
+              elif no:
+                  tag_w = text_width(no, 12)
+                  parts.append(f'<text x="{CARD_W - 14}" y="26" text-anchor="end" font-family="{MONO}" font-size="12" font-weight="700" fill="{accent}">{escape(no)}</text>')
+
+              name_max = CARD_W - 20 - 14 - (tag_w + 10 if tag_w else 0)
+              squeeze = f' textLength="{name_max:.0f}" lengthAdjust="spacingAndGlyphs"' if len(project["name"]) * 15 * 0.58 > name_max else ""
+              parts.append(f'<text x="20" y="27" font-family="{CARD_SANS}" font-size="15" font-weight="600" fill="#F0F4FA"{squeeze}>{escape(project["name"])}</text>')
+
+              if stable:
+                  tag = version(stable["tag"])
+                  pill_w = round(text_width(tag, 12) + 26)
+                  parts.append(f'<rect x="20" y="36" width="{pill_w}" height="20" rx="5" fill="#1D2A45" stroke="#2E3F63"/>')
+                  parts.append(f'<circle cx="29" cy="46" r="3.5" fill="#47C9A2"/>')
+                  parts.append(f'<text x="37" y="50.2" font-family="{MONO}" font-size="12" font-weight="700" fill="#F0F4FA">{escape(tag)}</text>')
+                  parts.append(f'<text x="{20 + pill_w + 10}" y="50.2" font-family="{MONO}" font-size="12" fill="#B9C8DF">{stable["published"]:%Y-%m-%d}</text>')
+                  title = f"{project['name']}: latest stable release {tag}, published {stable['published']:%Y-%m-%d} (UTC)"
+              else:
+                  parts.append(f'<text x="20" y="50.2" font-family="{MONO}" font-size="12" fill="#8193B5">No stable release</text>')
+                  title = f"{project['name']}: no published stable release"
+              if pre:
+                  title += f"; newer pre-release {version(pre['tag'])}"
+
+              return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_W}" height="{CARD_H}" viewBox="0 0 {CARD_W} {CARD_H}" role="img" aria-label="{escape(title)}">
+            <title>{escape(title)}</title>
+            <defs>
+              <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0B1020"/>
+                <stop offset="1" stop-color="#0F1832"/>
+              </linearGradient>
+            </defs>
+            <rect x=".75" y=".75" width="{CARD_W - 1.5}" height="{CARD_H - 1.5}" rx="10" fill="url(#bg)" stroke="#263451" stroke-width="1.5"/>
+            <rect x="8" y="14" width="3" height="{CARD_H - 28}" rx="1.5" fill="{accent}"/>
+            {chr(10).join('  ' + p for p in parts).strip()}
+          </svg>
+          """
+
+
           # --------------------------------------------------------------------------- insights graphic
 
           def insights(projects: list[dict], now: datetime, as_of: str, since: datetime | None = None) -> str:
@@ -449,33 +507,38 @@ jobs:
           """
 
 
-          # --------------------------------------------------------------------------- README release table
+          # --------------------------------------------------------------------------- README release grid
 
-          TABLE_START, TABLE_END = "<!-- releases:start -->", "<!-- releases:end -->"
-          TABLES = {
-              "README.md": ("| Project | Latest stable release · date (UTC) |", "{name} latest release"),
-              "README.ko.md": ("| 프로젝트 | 최신 정식 버전 · 배포일(UTC) |", "{name} 최신 릴리스"),
+          GRID_START, GRID_END = "<!-- releases:start -->", "<!-- releases:end -->"
+          # alt text per README: (stable release, no stable release)
+          GRIDS = {
+              "README.md": ("{name}: latest release {tag}, {date} (UTC)", "{name}: no stable release yet"),
+              "README.ko.md": ("{name}: 최신 정식 릴리스 {tag}, {date}(UTC)", "{name}: 정식 릴리스 없음"),
           }
 
 
-          def release_table(projects: list[dict], owner: str, header: str, alt: str) -> str:
-              rows = [header, "|:--|:--|"]
+          def release_grid(projects: list[dict], owner: str, alts: tuple[str, str]) -> str:
+              """One linked card per repository; the cards wrap into 3, 2 or 1 per row with the page width."""
+              lines = []
               for p in projects:
                   url = f"https://github.com/{owner}/{p['repo']}"
-                  target = f"{url}/releases/latest" if p["stable"] else f"{url}/releases"
-                  label = escape(alt.format(name=p["name"]), {'"': "&quot;"})
-                  rows.append(
-                      f'| **[{p["name"]}]({url})** | <a href="{target}">'
-                      f'<img src="assets/generated/release-{p["slug"]}.svg" alt="{label}"></a> |'
+                  if p["stable"]:
+                      target = f"{url}/releases/latest"
+                      alt = alts[0].format(name=p["name"], tag=version(p["stable"]["tag"]), date=f"{p['stable']['published']:%Y-%m-%d}")
+                  else:
+                      target, alt = f"{url}/releases", alts[1].format(name=p["name"])
+                  lines.append(
+                      f'<a href="{target}"><img src="assets/generated/releases/{p["slug"]}.svg" '
+                      f'width="{CARD_W}" alt="{escape(alt, {chr(34): "&quot;"})}"></a>'
                   )
-              return "\n".join(rows)
+              return "\n".join(lines)
 
 
-          def with_table(document: str, table: str) -> str:
-              start, end = document.find(TABLE_START), document.find(TABLE_END)
+          def with_grid(document: str, grid: str) -> str:
+              start, end = document.find(GRID_START), document.find(GRID_END)
               if start < 0 or end < start:
-                  raise ValueError(f"release table markers {TABLE_START} / {TABLE_END} not found")
-              return f"{document[:start + len(TABLE_START)]}\n{table}\n{document[end:]}"
+                  raise ValueError(f"release grid markers {GRID_START} / {GRID_END} not found")
+              return f"{document[:start + len(GRID_START)]}\n\n{grid}\n\n{document[end:]}"
 
 
           # --------------------------------------------------------------------------- output
@@ -501,16 +564,21 @@ jobs:
               now = datetime.now(timezone.utc)
               listed = by_update(featured + others)
               outputs: dict[Path, str] = {}
-              for project in listed:
+              for project in featured:  # badges on the featured cards
                   outputs[OUT_DIR / f"release-{project['slug']}.svg"] = release_badge(project)
-              stale = sorted(path for path in OUT_DIR.glob("release-*.svg") if path not in outputs)
+              for project in listed:    # cards in the 06 grid
+                  outputs[OUT_DIR / "releases" / f"{project['slug']}.svg"] = release_card(project)
+              stale = sorted(
+                  path for path in [*OUT_DIR.glob("release-*.svg"), *OUT_DIR.glob("releases/*.svg")]
+                  if path not in outputs
+              )
 
               try:
-                  for name, (header, alt) in TABLES.items():
+                  for name, alts in GRIDS.items():
                       path = ROOT / name
-                      outputs[path] = with_table(path.read_text(encoding="utf-8"), release_table(listed, config["owner"], header, alt))
+                      outputs[path] = with_grid(path.read_text(encoding="utf-8"), release_grid(listed, config["owner"], alts))
               except (OSError, ValueError) as error:
-                  print(f"error: cannot update the README release tables, keeping existing files: {error}", file=sys.stderr)
+                  print(f"error: cannot update the README release grids, keeping existing files: {error}", file=sys.stderr)
                   return 1
 
               # Keep the previous "as of" date unless the data itself changed, so an

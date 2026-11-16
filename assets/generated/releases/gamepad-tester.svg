@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="276" height="64" viewBox="0 0 276 64" role="img" aria-label="GamePadTester: latest stable release v3.2.2, published 2026-11-05 (UTC)">
+  <title>GamePadTester: latest stable release v3.2.2, published 2026-11-05 (UTC)</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#0F1832"/>
+    </linearGradient>
+  </defs>
+  <rect x=".75" y=".75" width="274.5" height="62.5" rx="10" fill="url(#bg)" stroke="#263451" stroke-width="1.5"/>
+  <rect x="8" y="14" width="3" height="36" rx="1.5" fill="#5B9DF5"/>
+  <text x="262" y="26" text-anchor="end" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="700" fill="#5B9DF5">05</text>
+  <text x="20" y="27" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#F0F4FA">GamePadTester</text>
+  <rect x="20" y="36" width="70" height="20" rx="5" fill="#1D2A45" stroke="#2E3F63"/>
+  <circle cx="29" cy="46" r="3.5" fill="#47C9A2"/>
+  <text x="37" y="50.2" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="700" fill="#F0F4FA">v3.2.2</text>
+  <text x="100" y="50.2" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" fill="#B9C8DF">2026-11-05</text>
+</svg>

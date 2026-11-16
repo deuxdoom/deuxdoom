@@ -265,27 +265,27 @@ Claude와 Codex 사용 한도를 실시간으로 보여 주는 가벼운 트레�
 
 ## 06 · 최신 소프트웨어 릴리스
 
-위에 소개한 8개뿐 아니라, 직접 만들어 GitHub Releases로 배포하는 공개 저장소 전체를 최근 업데이트 순으로 보여 줍니다. 포크와 다른 사람의 프로젝트는 넣지 않으며, 자체 릴리스를 내는 확장 포크인 08번만 예외로 포함합니다.
+위에 소개한 8개뿐 아니라, 직접 만들어 GitHub Releases로 배포하는 공개 저장소 전체를 최근 업데이트 순으로 보여 줍니다. 카드의 번호는 위에 소개한 주요 프로젝트 번호입니다. 포크와 다른 사람의 프로젝트는 넣지 않으며, 자체 릴리스를 내는 확장 포크인 08번만 예외로 포함합니다.
 
 <!-- releases:start -->
-| 프로젝트 | 최신 정식 버전 · 배포일(UTC) |
-|:--|:--|
-| **[SteamSlice](https://github.com/deuxdoom/SteamSlice)** | <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/release-steam-slice.svg" alt="SteamSlice 최신 릴리스"></a> |
-| **[FrameDoubler](https://github.com/deuxdoom/FrameDoubler)** | <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/release-frame-doubler.svg" alt="FrameDoubler 최신 릴리스"></a> |
-| **[TVer Downloader](https://github.com/deuxdoom/TVerDownloader)** | <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/release-tver-downloader.svg" alt="TVer Downloader 최신 릴리스"></a> |
-| **[ChzzkDownloader](https://github.com/deuxdoom/ChzzkDownloader)** | <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/release-chzzk-downloader.svg" alt="ChzzkDownloader 최신 릴리스"></a> |
-| **[AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)** | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor 최신 릴리스"></a> |
-| **[GamePadTester](https://github.com/deuxdoom/GamePadTester)** | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester 최신 릴리스"></a> |
-| **[ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)** | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier 최신 릴리스"></a> |
-| **[PICVIUM](https://github.com/deuxdoom/PICVIUM)** | <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/release-picvium.svg" alt="PICVIUM 최신 릴리스"></a> |
-| **[ShellTidy](https://github.com/deuxdoom/ShellTidy)** | <a href="https://github.com/deuxdoom/ShellTidy/releases/latest"><img src="assets/generated/release-shell-tidy.svg" alt="ShellTidy 최신 릴리스"></a> |
-| **[PARANORMASIGHT-KR-Patch](https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch)** | <a href="https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch/releases/latest"><img src="assets/generated/release-paranormasight-kr-patch.svg" alt="PARANORMASIGHT-KR-Patch 최신 릴리스"></a> |
-| **[ImageUpscaler](https://github.com/deuxdoom/ImageUpscaler)** | <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/release-image-upscaler.svg" alt="ImageUpscaler 최신 릴리스"></a> |
-| **[APEX GIF MAKER](https://github.com/deuxdoom/APEXGIFMAKER)** | <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/release-apexgifmaker.svg" alt="APEX GIF MAKER 최신 릴리스"></a> |
-| **[VideoBatchConverter](https://github.com/deuxdoom/VideoBatchConverter)** | <a href="https://github.com/deuxdoom/VideoBatchConverter/releases/latest"><img src="assets/generated/release-video-batch-converter.svg" alt="VideoBatchConverter 최신 릴리스"></a> |
+
+<a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/releases/steam-slice.svg" width="276" alt="SteamSlice: 최신 정식 릴리스 v1.0.1, 2026-11-16(UTC)"></a>
+<a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/releases/frame-doubler.svg" width="276" alt="FrameDoubler: 최신 정식 릴리스 v2.0.1, 2026-11-16(UTC)"></a>
+<a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/releases/tver-downloader.svg" width="276" alt="TVer Downloader: 최신 정식 릴리스 v4.5.4, 2026-11-11(UTC)"></a>
+<a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/releases/chzzk-downloader.svg" width="276" alt="ChzzkDownloader: 최신 정식 릴리스 v1.0.9, 2026-11-08(UTC)"></a>
+<a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/releases/ai-agents-usage-monitor.svg" width="276" alt="AI Agents Usage Monitor: 최신 정식 릴리스 v3.9.0, 2026-11-05(UTC)"></a>
+<a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/releases/gamepad-tester.svg" width="276" alt="GamePadTester: 최신 정식 릴리스 v3.2.2, 2026-11-05(UTC)"></a>
+<a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/releases/shadowplay-notifier.svg" width="276" alt="ShadowPlay Notifier: 최신 정식 릴리스 v2.7.3, 2026-11-05(UTC)"></a>
+<a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/releases/picvium.svg" width="276" alt="PICVIUM: 최신 정식 릴리스 v1.0.6, 2026-11-02(UTC)"></a>
+<a href="https://github.com/deuxdoom/ShellTidy/releases/latest"><img src="assets/generated/releases/shell-tidy.svg" width="276" alt="ShellTidy: 최신 정식 릴리스 v0.0.2, 2026-10-27(UTC)"></a>
+<a href="https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch/releases/latest"><img src="assets/generated/releases/paranormasight-kr-patch.svg" width="276" alt="PARANORMASIGHT-KR-Patch: 최신 정식 릴리스 file23-v1.0.0, 2026-10-25(UTC)"></a>
+<a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/releases/image-upscaler.svg" width="276" alt="ImageUpscaler: 최신 정식 릴리스 v1.0.1, 2026-10-14(UTC)"></a>
+<a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/releases/apexgifmaker.svg" width="276" alt="APEX GIF MAKER: 최신 정식 릴리스 v3.1.0, 2026-09-29(UTC)"></a>
+<a href="https://github.com/deuxdoom/VideoBatchConverter/releases/latest"><img src="assets/generated/releases/video-batch-converter.svg" width="276" alt="VideoBatchConverter: 최신 정식 릴리스 v2.0.0, 2025-09-16(UTC)"></a>
+
 <!-- releases:end -->
 
-<sub>각 저장소의 GitHub Releases에서 초안·사전 배포를 제외한 최신 정식 릴리스를 읽고, 표시된 날짜 순으로 정렬합니다. 더 최신인 사전 배포가 있으면 배지에 함께 표시합니다. 목록은 6시간마다 다시 만들며, 새 공개 저장소는 첫 릴리스를 낸 뒤에 추가됩니다.</sub>
+<sub>각 카드는 초안·사전 배포를 제외한 최신 정식 릴리스와 배포일(UTC)을 보여 주며, 누르면 해당 릴리스로 이동합니다. 더 최신인 사전 배포가 있으면 카드 오른쪽 위에 표시합니다. 카드는 6시간마다 다시 만들며, 새 공개 저장소는 첫 릴리스를 낸 뒤에 추가됩니다.</sub>
 
 <a id="engineering"></a>
 
