@@ -67,7 +67,7 @@ A PyQt6 desktop app that saves TVer episodes, and YouTube videos, through yt-dlp
 - Region check that re-runs when the network changes, and 7 UI languages that switch without a restart
 
 <b>Stack</b>&nbsp; `Python` `PyQt6` `yt-dlp` `FFmpeg` `NVENC`<br>
-<b>Distribution</b>&nbsp; [Freeware (personal, non-commercial use)](https://github.com/deuxdoom/TVerDownloader#license) · source not published · Windows&nbsp;10/11&nbsp;x64<br>
+<b>Distribution</b>&nbsp; [Freeware (personal, non-commercial use)](https://github.com/deuxdoom/TVerDownloader#license) · source&nbsp;not&nbsp;published · Windows&nbsp;10/11&nbsp;x64<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img align="absmiddle" src="assets/generated/release-tver-downloader.svg" alt="Latest stable release of TVer Downloader"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/TVerDownloader) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/TVerDownloader/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/TVerDownloader/)
@@ -90,7 +90,7 @@ Saves CHZZK VODs and clips, as well as YouTube, Instagram, TVer and other suppor
 - Keeps the original by default, with optional H.264 / H.265 on CPU or NVENC, and SHA-256 verified self-updates
 
 <b>Stack</b>&nbsp; `Python` `PySide6` `yt-dlp` `FFmpeg` `NVENC`<br>
-<b>Distribution</b>&nbsp; [Freeware (personal, non-commercial use)](https://github.com/deuxdoom/ChzzkDownloader#license) · source not published · Windows&nbsp;10/11&nbsp;x64<br>
+<b>Distribution</b>&nbsp; [Freeware (personal, non-commercial use)](https://github.com/deuxdoom/ChzzkDownloader#license) · source&nbsp;not&nbsp;published · Windows&nbsp;10/11&nbsp;x64<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img align="absmiddle" src="assets/generated/release-chzzk-downloader.svg" alt="Latest stable release of ChzzkDownloader"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/ChzzkDownloader) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/ChzzkDownloader/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/ChzzkDownloader/)
@@ -113,7 +113,7 @@ Views photos, graphics, camera RAW files and document images in one window, with
 - Customizable toolbar and icon themes, command search, Windows file associations and 9 UI languages that switch without a restart
 
 <b>Stack</b>&nbsp; `C#` `.NET 10` `Avalonia 12` `Magick.NET` `LibRaw` `PDFium` `Real-ESRGAN / Vulkan`<br>
-<b>Distribution</b>&nbsp; [Freeware (personal, non-commercial use)](https://github.com/deuxdoom/PICVIUM#license) · source not published · Windows&nbsp;10/11&nbsp;x64<br>
+<b>Distribution</b>&nbsp; [Freeware (personal, non-commercial use)](https://github.com/deuxdoom/PICVIUM#license) · source&nbsp;not&nbsp;published · Windows&nbsp;10/11&nbsp;x64<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img align="absmiddle" src="assets/generated/release-picvium.svg" alt="Latest stable release of PICVIUM"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/PICVIUM) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/PICVIUM/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/PICVIUM/)
@@ -136,7 +136,7 @@ Shows and records console gameplay from a capture card with real-time frame gene
 - Time estimate from a short trial run, a batch queue, a command-line tool and SHA-256 verified updates that roll back on failure
 
 <b>Stack</b>&nbsp; `C#` `.NET 10` `WPF` `C++` `RIFE` `ncnn / Vulkan` `FFmpeg`<br>
-<b>Distribution</b>&nbsp; [Open source (MIT)](https://github.com/deuxdoom/FrameDoubler#license) · source published · Windows&nbsp;11&nbsp;x64<br>
+<b>Distribution</b>&nbsp; [Open source (MIT)](https://github.com/deuxdoom/FrameDoubler#license) · source&nbsp;published · Windows&nbsp;11&nbsp;x64<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img align="absmiddle" src="assets/generated/release-frame-doubler.svg" alt="Latest stable release of FrameDoubler"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/FrameDoubler) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/FrameDoubler/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/FrameDoubler/)
@@ -159,7 +159,7 @@ Measures stick circularity and polling rate with the same methods as gamepad-tes
 - One-click 1000 Hz USB polling for DualSense, 800×400 result cards and SHA-256 verified updates
 
 <b>Stack</b>&nbsp; `Python` `PySide6` `C++20` `SDL3` `XInput` `HID`<br>
-<b>Distribution</b>&nbsp; [Freeware (personal and business use)](https://github.com/deuxdoom/GamePadTester#license) · source not published · Windows&nbsp;10/11<br>
+<b>Distribution</b>&nbsp; [Freeware (personal and business use)](https://github.com/deuxdoom/GamePadTester#license) · source&nbsp;not&nbsp;published · Windows&nbsp;10/11<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img align="absmiddle" src="assets/generated/release-gamepad-tester.svg" alt="Latest stable release of GamePadTester"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/GamePadTester) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/GamePadTester/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/GamePadTester/)
@@ -182,7 +182,7 @@ Cuts a GIF or a video clip into five animated slices that run across the five pa
 - Light and dark themes, tray, single instance, and SHA-256 verified updates that restore the previous files on failure
 
 <b>Stack</b>&nbsp; `Python` `PyQt6` `Gifsicle` `FFmpeg` `PyInstaller`<br>
-<b>Distribution</b>&nbsp; [Open source (GPL-3.0)](https://github.com/deuxdoom/SteamSlice#license) · source published · Windows&nbsp;10/11&nbsp;x64<br>
+<b>Distribution</b>&nbsp; [Open source (GPL-3.0)](https://github.com/deuxdoom/SteamSlice#license) · source&nbsp;published · Windows&nbsp;10/11&nbsp;x64<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img align="absmiddle" src="assets/generated/release-steam-slice.svg" alt="Latest stable release of SteamSlice"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/SteamSlice) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/SteamSlice/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/SteamSlice/)
@@ -205,7 +205,7 @@ Shows NVIDIA ShadowPlay recording status in large type on a secondary monitor, a
 - Single portable EXE that pauses rendering while hidden in the tray, with SHA-256 checked in-app updates
 
 <b>Stack</b>&nbsp; `Python` `Tkinter` `PyInstaller` `Open-Meteo`<br>
-<b>Distribution</b>&nbsp; [Freeware (personal and business use)](https://github.com/deuxdoom/Shadowplay-Notifier#license) · source not published · Windows&nbsp;10/11<br>
+<b>Distribution</b>&nbsp; [Freeware (personal and business use)](https://github.com/deuxdoom/Shadowplay-Notifier#license) · source&nbsp;not&nbsp;published · Windows&nbsp;10/11<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img align="absmiddle" src="assets/generated/release-shadowplay-notifier.svg" alt="Latest stable release of ShadowPlay Notifier"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/Shadowplay-Notifier) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/Shadowplay-Notifier/)
@@ -228,7 +228,7 @@ A lightweight tray app that shows Claude and Codex usage limits in real time. It
 - Portable single EXE, 13 languages, event commands and an in-app updater with rollback
 
 <b>Stack</b>&nbsp; `Python` `pywebview` `pystray` `PyInstaller` `C#`<br>
-<b>Distribution</b>&nbsp; [Open source (MIT)](https://github.com/deuxdoom/usage-monitor-for-claude#license) · source published · Windows&nbsp;10/11&nbsp;x64<br>
+<b>Distribution</b>&nbsp; [Open source (MIT)](https://github.com/deuxdoom/usage-monitor-for-claude#license) · source&nbsp;published · Windows&nbsp;10/11&nbsp;x64<br>
 <b>Latest</b>&nbsp; <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img align="absmiddle" src="assets/generated/release-ai-agents-usage-monitor.svg" alt="Latest stable release of AI Agents Usage Monitor"></a>
 
 [![Repository](assets/ui/btn-repository.svg)](https://github.com/deuxdoom/usage-monitor-for-claude) [![Download](assets/ui/btn-download.svg)](https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest) [![Website](assets/ui/btn-website.svg)](https://deuxdoom.github.io/usage-monitor-for-claude/)
