@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="152" viewBox="0 0 1200 152" role="img" aria-label="분야: Windows 데스크톱 소프트웨어. 첫 배포: 2025년 8월. 주요 언어: Python, C#, C++. 활동 지역: 대한민국 서울.">
-  <title>분야: Windows 데스크톱 소프트웨어. 첫 배포: 2025년 8월. 주요 언어: Python, C#, C++. 활동 지역: 대한민국 서울.</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="152" viewBox="0 0 1200 152" role="img" aria-label="분야: Windows 데스크톱 소프트웨어. 첫 배포: 2013년 2월. 주요 언어: Python, C#, C++.">
+  <title>분야: Windows 데스크톱 소프트웨어. 첫 배포: 2013년 2월. 주요 언어: Python, C#, C++.</title>
   <defs>
     <linearGradient id="s-bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0B1020"/>
@@ -14,13 +14,10 @@
   <rect x="36" y="20" width="88" height="2" rx="1" fill="url(#s-rule)"/>
   <text x="36" y="65" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="16" fill="#8E9FC2">분야</text>
   <text x="36" y="98" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="22" font-weight="600" fill="#F0F4FA">Windows 데스크톱 소프트웨어</text>
-  <path d="M360 50V98" stroke="#263451" stroke-width="1.5"/>
-  <text x="396" y="65" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="16" fill="#8E9FC2">첫 배포</text>
-  <text x="396" y="98" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="22" font-weight="600" fill="#F0F4FA">2025년 8월</text>
-  <path d="M620 50V98" stroke="#263451" stroke-width="1.5"/>
-  <text x="656" y="65" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="16" fill="#8E9FC2">주요 언어</text>
-  <text x="656" y="98" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="22" font-weight="600" fill="#F0F4FA">Python · C# · C++</text>
-  <path d="M880 50V98" stroke="#263451" stroke-width="1.5"/>
-  <text x="916" y="65" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="16" fill="#8E9FC2">활동 지역</text>
-  <text x="916" y="98" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="22" font-weight="600" fill="#F0F4FA">대한민국 서울</text>
+  <path d="M440 50V98" stroke="#263451" stroke-width="1.5"/>
+  <text x="476" y="65" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="16" fill="#8E9FC2">첫 배포</text>
+  <text x="476" y="98" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="22" font-weight="600" fill="#F0F4FA">2013년 2월</text>
+  <path d="M820 50V98" stroke="#263451" stroke-width="1.5"/>
+  <text x="856" y="65" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="16" fill="#8E9FC2">주요 언어</text>
+  <text x="856" y="98" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif" font-size="22" font-weight="600" fill="#F0F4FA">Python · C# · C++</text>
 </svg>

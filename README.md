@@ -14,7 +14,7 @@
 
 <picture>
   <source media="(max-width: 640px)" srcset="assets/summary-compact.svg">
-  <img src="assets/summary.svg" width="100%" alt="Focus: Windows desktop software. Releasing since August 2025. Languages: Python, C# and C++. Based in Seoul, South Korea.">
+  <img src="assets/summary.svg" width="100%" alt="Focus: Windows desktop software. Releasing since February 2013. Languages: Python, C# and C++.">
 </picture>
 
 <p>
@@ -265,18 +265,27 @@ Technologies that ship in the releases above, grouped by area. The numbers refer
 
 ## 06 · Latest Software Releases
 
+Every public repository I created and ship through GitHub Releases, not only the eight featured above, with the most recently updated first. Forks and other people's projects are left out; the one exception is 08, an extended fork with its own releases.
+
+<!-- releases:start -->
 | Project | Latest stable release · date (UTC) |
 |:--|:--|
-| **01 · [TVer Downloader](https://github.com/deuxdoom/TVerDownloader)** | <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/release-tver-downloader.svg" alt="TVer Downloader latest release"></a> |
-| **02 · [ChzzkDownloader](https://github.com/deuxdoom/ChzzkDownloader)** | <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/release-chzzk-downloader.svg" alt="ChzzkDownloader latest release"></a> |
-| **03 · [PICVIUM](https://github.com/deuxdoom/PICVIUM)** | <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/release-picvium.svg" alt="PICVIUM latest release"></a> |
-| **04 · [FrameDoubler](https://github.com/deuxdoom/FrameDoubler)** | <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/release-frame-doubler.svg" alt="FrameDoubler latest release"></a> |
-| **05 · [GamePadTester](https://github.com/deuxdoom/GamePadTester)** | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester latest release"></a> |
-| **06 · [SteamSlice](https://github.com/deuxdoom/SteamSlice)** | <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/release-steam-slice.svg" alt="SteamSlice latest release"></a> |
-| **07 · [ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)** | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier latest release"></a> |
-| **08 · [AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)** | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor latest release"></a> |
+| **[SteamSlice](https://github.com/deuxdoom/SteamSlice)** | <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/release-steam-slice.svg" alt="SteamSlice latest release"></a> |
+| **[FrameDoubler](https://github.com/deuxdoom/FrameDoubler)** | <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/release-frame-doubler.svg" alt="FrameDoubler latest release"></a> |
+| **[TVer Downloader](https://github.com/deuxdoom/TVerDownloader)** | <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/release-tver-downloader.svg" alt="TVer Downloader latest release"></a> |
+| **[ChzzkDownloader](https://github.com/deuxdoom/ChzzkDownloader)** | <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/release-chzzk-downloader.svg" alt="ChzzkDownloader latest release"></a> |
+| **[AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)** | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor latest release"></a> |
+| **[GamePadTester](https://github.com/deuxdoom/GamePadTester)** | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester latest release"></a> |
+| **[ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)** | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier latest release"></a> |
+| **[PICVIUM](https://github.com/deuxdoom/PICVIUM)** | <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/release-picvium.svg" alt="PICVIUM latest release"></a> |
+| **[ShellTidy](https://github.com/deuxdoom/ShellTidy)** | <a href="https://github.com/deuxdoom/ShellTidy/releases/latest"><img src="assets/generated/release-shell-tidy.svg" alt="ShellTidy latest release"></a> |
+| **[PARANORMASIGHT-KR-Patch](https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch)** | <a href="https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch/releases/latest"><img src="assets/generated/release-paranormasight-kr-patch.svg" alt="PARANORMASIGHT-KR-Patch latest release"></a> |
+| **[ImageUpscaler](https://github.com/deuxdoom/ImageUpscaler)** | <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/release-image-upscaler.svg" alt="ImageUpscaler latest release"></a> |
+| **[APEX GIF MAKER](https://github.com/deuxdoom/APEXGIFMAKER)** | <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/release-apexgifmaker.svg" alt="APEX GIF MAKER latest release"></a> |
+| **[VideoBatchConverter](https://github.com/deuxdoom/VideoBatchConverter)** | <a href="https://github.com/deuxdoom/VideoBatchConverter/releases/latest"><img src="assets/generated/release-video-batch-converter.svg" alt="VideoBatchConverter latest release"></a> |
+<!-- releases:end -->
 
-<sub>Read from each repository's GitHub Releases: the newest published release that is not a draft or pre-release. A newer pre-release, if one exists, appears as an extra segment, and a project without a release shows “No published release”. Refreshed every six hours.</sub>
+<sub>Read from each repository's GitHub Releases: the newest published release that is not a draft or pre-release, sorted by the date shown. A newer pre-release, if one exists, appears as an extra segment. The list is rebuilt every six hours, so a new public repository appears after its first release.</sub>
 
 <a id="engineering"></a>
 

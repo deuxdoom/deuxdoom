@@ -1,9 +1,11 @@
-# Regenerates assets/generated/ (release badges + release insights) from public
-# GitHub data and commits only when the generated files actually change.
+# Regenerates assets/generated/ (release badges + release insights) and the
+# release tables in README.md / README.ko.md from public GitHub data, and commits
+# only when the generated content actually changes.
 #
 # This file is self-contained: the project list and the generator script are
 # embedded below and written to the runner's workspace at run time. Only
-# assets/generated/ is ever committed.
+# assets/generated/ and the README text between <!-- releases:start --> and
+# <!-- releases:end --> are ever changed.
 #
 # - Triggers: schedule and manual dispatch only (no push trigger, so the bot's
 #   own commit can never start another run).
@@ -43,6 +45,10 @@ jobs:
           {
             "owner": "deuxdoom",
             "branch": "main",
+            "releasing_since": "2013-02",
+            "names": {
+              "APEXGIFMAKER": "APEX GIF MAKER"
+            },
             "projects": [
               {
                 "no": "01",
@@ -120,8 +126,15 @@ jobs:
               python scripts/update_insights.py
 
           Outputs (generated, do not edit by hand):
-              assets/generated/release-<slug>.svg   latest stable release + date per project
-              assets/generated/insights.svg         totals and monthly release activity
+              assets/generated/release-<slug>.svg   latest stable release + date per repository
+              assets/generated/insights.svg         totals and monthly release activity (featured projects)
+              README.md, README.ko.md               only the release table between the
+                                                    <!-- releases:start --> / <!-- releases:end --> markers
+
+          The release table lists the featured projects plus every other public, non-fork
+          repository of the owner that has at least one published release, newest
+          release first (by the date shown on its badge). Badges of repositories that
+          drop out of the table are removed.
 
           Only the public GitHub REST API is used. GITHUB_TOKEN is optional and only
           raises the rate limit. Every request is made before any file is written: if a
@@ -192,34 +205,68 @@ jobs:
               return datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
 
 
-          def collect(config: dict) -> list[dict]:
+          def release_data(owner: str, repo: str) -> dict:
+              releases = [
+                  r for r in request_all(f"{API}/repos/{owner}/{repo}/releases?per_page=100")
+                  if not r.get("draft") and r.get("published_at")
+              ]
+              stable = latest_stable(owner, repo) if releases else None
+              newer_pre = None
+              pres = sorted((r for r in releases if r.get("prerelease")), key=lambda r: r["published_at"], reverse=True)
+              if pres and (stable is None or pres[0]["published_at"] > stable["published_at"]):
+                  newer_pre = pres[0]
+              return {
+                  "releases": [
+                      {
+                          "tag": r["tag_name"],
+                          "published": parse_time(r["published_at"]),
+                          "downloads": sum(a.get("download_count", 0) for a in r.get("assets", [])),
+                      }
+                      for r in releases
+                  ],
+                  "stable": {"tag": stable["tag_name"], "published": parse_time(stable["published_at"])} if stable else None,
+                  "pre": {"tag": newer_pre["tag_name"], "published": parse_time(newer_pre["published_at"])} if newer_pre else None,
+              }
+
+
+          def slugify(repo: str) -> str:
+              """VideoBatchConverter -> video-batch-converter, PARANORMASIGHT-KR-Patch -> paranormasight-kr-patch."""
+              words = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", "-", repo).lower()
+              return re.sub(r"[^a-z0-9]+", "-", words).strip("-")
+
+
+          def collect(config: dict) -> tuple[list[dict], list[dict]]:
+              """Featured projects (fixed order) and the owner's other released repositories."""
               owner = config["owner"]
-              projects = []
-              for project in config["projects"]:
-                  repo = project["repo"]
-                  releases = [
-                      r for r in request_all(f"{API}/repos/{owner}/{repo}/releases?per_page=100")
-                      if not r.get("draft") and r.get("published_at")
-                  ]
-                  stable = latest_stable(owner, repo)
-                  newer_pre = None
-                  pres = sorted((r for r in releases if r.get("prerelease")), key=lambda r: r["published_at"], reverse=True)
-                  if pres and (stable is None or pres[0]["published_at"] > stable["published_at"]):
-                      newer_pre = pres[0]
-                  projects.append({
-                      **project,
-                      "releases": [
-                          {
-                              "tag": r["tag_name"],
-                              "published": parse_time(r["published_at"]),
-                              "downloads": sum(a.get("download_count", 0) for a in r.get("assets", [])),
-                          }
-                          for r in releases
-                      ],
-                      "stable": {"tag": stable["tag_name"], "published": parse_time(stable["published_at"])} if stable else None,
-                      "pre": {"tag": newer_pre["tag_name"], "published": parse_time(newer_pre["published_at"])} if newer_pre else None,
-                  })
-              return projects
+              featured = [{**project, **release_data(owner, project["repo"])} for project in config["projects"]]
+
+              known = {p["repo"].lower() for p in featured}
+              names = config.get("names", {})
+              others = []
+              for repo in request_all(f"{API}/users/{owner}/repos?type=owner&per_page=100"):
+                  name = repo["name"]
+                  if repo.get("private") or repo.get("fork") or name.lower() in known or name.lower() == owner.lower():
+                      continue
+                  data = release_data(owner, name)
+                  if data["releases"]:
+                      others.append({"repo": name, "name": names.get(name, name), "slug": slugify(name), **data})
+              slugs = [p["slug"] for p in featured + others]
+              if len(slugs) != len(set(slugs)):
+                  raise ValueError(f"duplicate badge slugs: {sorted(slugs)}")
+              return featured, others
+
+
+          def shown_date(project: dict) -> datetime | None:
+              """The date the badge shows (stable release), or the newest release when there is no stable one."""
+              if project["stable"]:
+                  return project["stable"]["published"]
+              return max((r["published"] for r in project["releases"]), default=None)
+
+
+          def by_update(projects: list[dict]) -> list[dict]:
+              ordered = sorted(projects, key=lambda p: p["name"].lower())
+              ordered.sort(key=lambda p: shown_date(p) or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
+              return ordered
 
 
           # --------------------------------------------------------------------------- helpers
@@ -307,12 +354,13 @@ jobs:
 
           # --------------------------------------------------------------------------- insights graphic
 
-          def insights(projects: list[dict], now: datetime, as_of: str) -> str:
+          def insights(projects: list[dict], now: datetime, as_of: str, since: datetime | None = None) -> str:
               W, H = 760, 520
               all_releases = [(p, r) for p in projects for r in p["releases"]]
               total_releases = len(all_releases)
               total_downloads = sum(r["downloads"] for _, r in all_releases)
-              first = min((r["published"] for _, r in all_releases), default=None)
+              # "Shipping since" also counts earlier work that is no longer public (config "releasing_since").
+              first = min([r["published"] for _, r in all_releases] + ([since] if since else []), default=None)
               latest_p, latest_r = max(all_releases, key=lambda pr: pr[1]["published"], default=(None, None))
 
               tiles = [
@@ -401,6 +449,35 @@ jobs:
           """
 
 
+          # --------------------------------------------------------------------------- README release table
+
+          TABLE_START, TABLE_END = "<!-- releases:start -->", "<!-- releases:end -->"
+          TABLES = {
+              "README.md": ("| Project | Latest stable release · date (UTC) |", "{name} latest release"),
+              "README.ko.md": ("| 프로젝트 | 최신 정식 버전 · 배포일(UTC) |", "{name} 최신 릴리스"),
+          }
+
+
+          def release_table(projects: list[dict], owner: str, header: str, alt: str) -> str:
+              rows = [header, "|:--|:--|"]
+              for p in projects:
+                  url = f"https://github.com/{owner}/{p['repo']}"
+                  target = f"{url}/releases/latest" if p["stable"] else f"{url}/releases"
+                  label = escape(alt.format(name=p["name"]), {'"': "&quot;"})
+                  rows.append(
+                      f'| **[{p["name"]}]({url})** | <a href="{target}">'
+                      f'<img src="assets/generated/release-{p["slug"]}.svg" alt="{label}"></a> |'
+                  )
+              return "\n".join(rows)
+
+
+          def with_table(document: str, table: str) -> str:
+              start, end = document.find(TABLE_START), document.find(TABLE_END)
+              if start < 0 or end < start:
+                  raise ValueError(f"release table markers {TABLE_START} / {TABLE_END} not found")
+              return f"{document[:start + len(TABLE_START)]}\n{table}\n{document[end:]}"
+
+
           # --------------------------------------------------------------------------- output
 
           def write_if_changed(path: Path, content: str) -> bool:
@@ -416,30 +493,45 @@ jobs:
           def main() -> int:
               config = json.loads(CONFIG.read_text(encoding="utf-8"))
               try:
-                  projects = collect(config)
+                  featured, others = collect(config)
               except (urllib.error.URLError, TimeoutError, ValueError, KeyError) as error:
                   print(f"error: GitHub API request failed, keeping existing files: {error}", file=sys.stderr)
                   return 1
 
               now = datetime.now(timezone.utc)
+              listed = by_update(featured + others)
               outputs: dict[Path, str] = {}
-              for project in projects:
+              for project in listed:
                   outputs[OUT_DIR / f"release-{project['slug']}.svg"] = release_badge(project)
+              stale = sorted(path for path in OUT_DIR.glob("release-*.svg") if path not in outputs)
+
+              try:
+                  for name, (header, alt) in TABLES.items():
+                      path = ROOT / name
+                      outputs[path] = with_table(path.read_text(encoding="utf-8"), release_table(listed, config["owner"], header, alt))
+              except (OSError, ValueError) as error:
+                  print(f"error: cannot update the README release tables, keeping existing files: {error}", file=sys.stderr)
+                  return 1
 
               # Keep the previous "as of" date unless the data itself changed, so an
               # unchanged graphic does not produce a commit every run.
+              since = config.get("releasing_since")
+              since_dt = datetime.strptime(since, "%Y-%m").replace(tzinfo=timezone.utc) if since else None
               insights_path = OUT_DIR / "insights.svg"
               today = now.strftime("%Y-%m-%d")
               previous = insights_path.read_text(encoding="utf-8") if insights_path.exists() else ""
               match = re.search(r'data-as-of="([0-9-]+)"', previous)
-              if match and insights(projects, now, match.group(1)) == previous:
+              if match and insights(featured, now, match.group(1), since_dt) == previous:
                   outputs[insights_path] = previous
               else:
-                  outputs[insights_path] = insights(projects, now, today)
+                  outputs[insights_path] = insights(featured, now, today, since_dt)
 
               changed = [path for path, content in outputs.items() if write_if_changed(path, content)]
+              for path in stale:
+                  path.unlink()
+                  changed.append(path)
               for path in changed:
-                  print(f"updated {path.relative_to(ROOT).as_posix()}")
+                  print(f"{'removed' if path in stale else 'updated'} {path.relative_to(ROOT).as_posix()}")
               if not changed:
                   print("no changes")
               return 0
@@ -449,20 +541,20 @@ jobs:
               sys.exit(main())
           PY
 
-      - name: Generate release badges and insights
+      - name: Generate release badges, tables and insights
         run: python3 scripts/update_insights.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes
         run: |
-          if [ -z "$(git status --porcelain -- assets/generated)" ]; then
+          if [ -z "$(git status --porcelain -- assets/generated README.md README.ko.md)" ]; then
             echo "No data changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/generated
+          git add -A -- assets/generated README.md README.ko.md
           git commit -m "chore: refresh release data"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"

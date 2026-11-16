@@ -14,7 +14,7 @@
 
 <picture>
   <source media="(max-width: 640px)" srcset="assets/summary-ko-compact.svg">
-  <img src="assets/summary-ko.svg" width="100%" alt="분야: Windows 데스크톱 소프트웨어. 첫 배포: 2025년 8월. 주요 언어: Python, C#, C++. 활동 지역: 대한민국 서울.">
+  <img src="assets/summary-ko.svg" width="100%" alt="분야: Windows 데스크톱 소프트웨어. 첫 배포: 2013년 2월. 주요 언어: Python, C#, C++.">
 </picture>
 
 <p>
@@ -265,18 +265,27 @@ Claude와 Codex 사용 한도를 실시간으로 보여 주는 가벼운 트레�
 
 ## 06 · 최신 소프트웨어 릴리스
 
+위에 소개한 8개뿐 아니라, 직접 만들어 GitHub Releases로 배포하는 공개 저장소 전체를 최근 업데이트 순으로 보여 줍니다. 포크와 다른 사람의 프로젝트는 넣지 않으며, 자체 릴리스를 내는 확장 포크인 08번만 예외로 포함합니다.
+
+<!-- releases:start -->
 | 프로젝트 | 최신 정식 버전 · 배포일(UTC) |
 |:--|:--|
-| **01 · [TVer Downloader](https://github.com/deuxdoom/TVerDownloader)** | <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/release-tver-downloader.svg" alt="TVer Downloader 최신 릴리스"></a> |
-| **02 · [ChzzkDownloader](https://github.com/deuxdoom/ChzzkDownloader)** | <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/release-chzzk-downloader.svg" alt="ChzzkDownloader 최신 릴리스"></a> |
-| **03 · [PICVIUM](https://github.com/deuxdoom/PICVIUM)** | <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/release-picvium.svg" alt="PICVIUM 최신 릴리스"></a> |
-| **04 · [FrameDoubler](https://github.com/deuxdoom/FrameDoubler)** | <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/release-frame-doubler.svg" alt="FrameDoubler 최신 릴리스"></a> |
-| **05 · [GamePadTester](https://github.com/deuxdoom/GamePadTester)** | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester 최신 릴리스"></a> |
-| **06 · [SteamSlice](https://github.com/deuxdoom/SteamSlice)** | <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/release-steam-slice.svg" alt="SteamSlice 최신 릴리스"></a> |
-| **07 · [ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)** | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier 최신 릴리스"></a> |
-| **08 · [AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)** | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor 최신 릴리스"></a> |
+| **[SteamSlice](https://github.com/deuxdoom/SteamSlice)** | <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/release-steam-slice.svg" alt="SteamSlice 최신 릴리스"></a> |
+| **[FrameDoubler](https://github.com/deuxdoom/FrameDoubler)** | <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/release-frame-doubler.svg" alt="FrameDoubler 최신 릴리스"></a> |
+| **[TVer Downloader](https://github.com/deuxdoom/TVerDownloader)** | <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/release-tver-downloader.svg" alt="TVer Downloader 최신 릴리스"></a> |
+| **[ChzzkDownloader](https://github.com/deuxdoom/ChzzkDownloader)** | <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/release-chzzk-downloader.svg" alt="ChzzkDownloader 최신 릴리스"></a> |
+| **[AI Agents Usage Monitor](https://github.com/deuxdoom/usage-monitor-for-claude)** | <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/release-ai-agents-usage-monitor.svg" alt="AI Agents Usage Monitor 최신 릴리스"></a> |
+| **[GamePadTester](https://github.com/deuxdoom/GamePadTester)** | <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/release-gamepad-tester.svg" alt="GamePadTester 최신 릴리스"></a> |
+| **[ShadowPlay Notifier](https://github.com/deuxdoom/Shadowplay-Notifier)** | <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/release-shadowplay-notifier.svg" alt="ShadowPlay Notifier 최신 릴리스"></a> |
+| **[PICVIUM](https://github.com/deuxdoom/PICVIUM)** | <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/release-picvium.svg" alt="PICVIUM 최신 릴리스"></a> |
+| **[ShellTidy](https://github.com/deuxdoom/ShellTidy)** | <a href="https://github.com/deuxdoom/ShellTidy/releases/latest"><img src="assets/generated/release-shell-tidy.svg" alt="ShellTidy 최신 릴리스"></a> |
+| **[PARANORMASIGHT-KR-Patch](https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch)** | <a href="https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch/releases/latest"><img src="assets/generated/release-paranormasight-kr-patch.svg" alt="PARANORMASIGHT-KR-Patch 최신 릴리스"></a> |
+| **[ImageUpscaler](https://github.com/deuxdoom/ImageUpscaler)** | <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/release-image-upscaler.svg" alt="ImageUpscaler 최신 릴리스"></a> |
+| **[APEX GIF MAKER](https://github.com/deuxdoom/APEXGIFMAKER)** | <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/release-apexgifmaker.svg" alt="APEX GIF MAKER 최신 릴리스"></a> |
+| **[VideoBatchConverter](https://github.com/deuxdoom/VideoBatchConverter)** | <a href="https://github.com/deuxdoom/VideoBatchConverter/releases/latest"><img src="assets/generated/release-video-batch-converter.svg" alt="VideoBatchConverter 최신 릴리스"></a> |
+<!-- releases:end -->
 
-<sub>각 저장소의 GitHub Releases에서 초안·사전 배포를 제외한 최신 정식 릴리스를 읽습니다. 더 최신인 사전 배포가 있으면 배지에 함께 표시하고, 릴리스가 없으면 “No published release”로 표시합니다. 6시간마다 갱신합니다.</sub>
+<sub>각 저장소의 GitHub Releases에서 초안·사전 배포를 제외한 최신 정식 릴리스를 읽고, 표시된 날짜 순으로 정렬합니다. 더 최신인 사전 배포가 있으면 배지에 함께 표시합니다. 목록은 6시간마다 다시 만들며, 새 공개 저장소는 첫 릴리스를 낸 뒤에 추가됩니다.</sub>
 
 <a id="engineering"></a>
 
