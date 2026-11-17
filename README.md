@@ -269,6 +269,7 @@ Every public repository I created and ship through GitHub Releases, not only the
 
 <!-- releases:start -->
 
+<a href="https://github.com/deuxdoom/VideoBatchConverter/releases/latest"><img src="assets/generated/releases/video-batch-converter.svg" width="276" alt="VideoBatchConverter: latest release v3.0.0, 2026-11-17 (UTC)"></a>
 <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/releases/frame-doubler.svg" width="276" alt="FrameDoubler: latest release v2.0.3, 2026-11-17 (UTC)"></a>
 <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/releases/steam-slice.svg" width="276" alt="SteamSlice: latest release v1.0.1, 2026-11-16 (UTC)"></a>
 <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/releases/tver-downloader.svg" width="276" alt="TVer Downloader: latest release v4.5.4, 2026-11-11 (UTC)"></a>
@@ -281,7 +282,6 @@ Every public repository I created and ship through GitHub Releases, not only the
 <a href="https://github.com/deuxdoom/PARANORMASIGHT-KR-Patch/releases/latest"><img src="assets/generated/releases/paranormasight-kr-patch.svg" width="276" alt="PARANORMASIGHT-KR-Patch: latest release file23-v1.0.0, 2026-10-25 (UTC)"></a>
 <a href="https://github.com/deuxdoom/ImageUpscaler/releases/latest"><img src="assets/generated/releases/image-upscaler.svg" width="276" alt="ImageUpscaler: latest release v1.0.1, 2026-10-14 (UTC)"></a>
 <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/releases/apexgifmaker.svg" width="276" alt="APEX GIF MAKER: latest release v3.1.0, 2026-09-29 (UTC)"></a>
-<a href="https://github.com/deuxdoom/VideoBatchConverter/releases/latest"><img src="assets/generated/releases/video-batch-converter.svg" width="276" alt="VideoBatchConverter: latest release v2.0.0, 2025-09-16 (UTC)"></a>
 
 <!-- releases:end -->
 
