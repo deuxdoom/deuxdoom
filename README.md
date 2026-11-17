@@ -269,8 +269,8 @@ Every public repository I created and ship through GitHub Releases, not only the
 
 <!-- releases:start -->
 
+<a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/releases/frame-doubler.svg" width="276" alt="FrameDoubler: latest release v2.0.3, 2026-11-17 (UTC)"></a>
 <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/releases/steam-slice.svg" width="276" alt="SteamSlice: latest release v1.0.1, 2026-11-16 (UTC)"></a>
-<a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/releases/frame-doubler.svg" width="276" alt="FrameDoubler: latest release v2.0.1, 2026-11-16 (UTC)"></a>
 <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/releases/tver-downloader.svg" width="276" alt="TVer Downloader: latest release v4.5.4, 2026-11-11 (UTC)"></a>
 <a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/releases/chzzk-downloader.svg" width="276" alt="ChzzkDownloader: latest release v1.0.9, 2026-11-08 (UTC)"></a>
 <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/releases/ai-agents-usage-monitor.svg" width="276" alt="AI Agents Usage Monitor: latest release v3.9.0, 2026-11-05 (UTC)"></a>
