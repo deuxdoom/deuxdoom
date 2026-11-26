@@ -269,13 +269,13 @@ Claude와 Codex 사용 한도를 실시간으로 보여 주는 가벼운 트레�
 
 <!-- releases:start -->
 
+<a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/releases/chzzk-downloader.svg" width="276" alt="ChzzkDownloader: 최신 정식 릴리스 v1.0.10, 2026-11-26(UTC)"></a>
 <a href="https://github.com/deuxdoom/APEXGIFMAKER/releases/latest"><img src="assets/generated/releases/apexgifmaker.svg" width="276" alt="APEX GIF MAKER: 최신 정식 릴리스 v3.2.0, 2026-11-18(UTC)"></a>
 <a href="https://github.com/deuxdoom/Shadowplay-Notifier/releases/latest"><img src="assets/generated/releases/shadowplay-notifier.svg" width="276" alt="ShadowPlay Notifier: 최신 정식 릴리스 v2.7.4, 2026-11-18(UTC)"></a>
 <a href="https://github.com/deuxdoom/VideoBatchConverter/releases/latest"><img src="assets/generated/releases/video-batch-converter.svg" width="276" alt="VideoBatchConverter: 최신 정식 릴리스 v3.0.0, 2026-11-17(UTC)"></a>
 <a href="https://github.com/deuxdoom/FrameDoubler/releases/latest"><img src="assets/generated/releases/frame-doubler.svg" width="276" alt="FrameDoubler: 최신 정식 릴리스 v2.0.3, 2026-11-17(UTC)"></a>
 <a href="https://github.com/deuxdoom/SteamSlice/releases/latest"><img src="assets/generated/releases/steam-slice.svg" width="276" alt="SteamSlice: 최신 정식 릴리스 v1.0.1, 2026-11-16(UTC)"></a>
 <a href="https://github.com/deuxdoom/TVerDownloader/releases/latest"><img src="assets/generated/releases/tver-downloader.svg" width="276" alt="TVer Downloader: 최신 정식 릴리스 v4.5.4, 2026-11-11(UTC)"></a>
-<a href="https://github.com/deuxdoom/ChzzkDownloader/releases/latest"><img src="assets/generated/releases/chzzk-downloader.svg" width="276" alt="ChzzkDownloader: 최신 정식 릴리스 v1.0.9, 2026-11-08(UTC)"></a>
 <a href="https://github.com/deuxdoom/usage-monitor-for-claude/releases/latest"><img src="assets/generated/releases/ai-agents-usage-monitor.svg" width="276" alt="AI Agents Usage Monitor: 최신 정식 릴리스 v3.9.0, 2026-11-05(UTC)"></a>
 <a href="https://github.com/deuxdoom/GamePadTester/releases/latest"><img src="assets/generated/releases/gamepad-tester.svg" width="276" alt="GamePadTester: 최신 정식 릴리스 v3.2.2, 2026-11-05(UTC)"></a>
 <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="assets/generated/releases/picvium.svg" width="276" alt="PICVIUM: 최신 정식 릴리스 v1.0.6, 2026-11-02(UTC)"></a>
