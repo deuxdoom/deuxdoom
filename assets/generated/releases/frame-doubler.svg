@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="276" height="64" viewBox="0 0 276 64" role="img" aria-label="FrameDoubler: latest stable release v2.0.3, published 2026-11-17 (UTC)">
-  <title>FrameDoubler: latest stable release v2.0.3, published 2026-11-17 (UTC)</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="276" height="64" viewBox="0 0 276 64" role="img" aria-label="FrameDoubler: latest stable release v3.0.0, published 2026-11-28 (UTC)">
+  <title>FrameDoubler: latest stable release v3.0.0, published 2026-11-28 (UTC)</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0B1020"/>
@@ -12,6 +12,6 @@
   <text x="20" y="27" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#F0F4FA">FrameDoubler</text>
   <rect x="20" y="36" width="70" height="20" rx="5" fill="#1D2A45" stroke="#2E3F63"/>
   <circle cx="29" cy="46" r="3.5" fill="#47C9A2"/>
-  <text x="37" y="50.2" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="700" fill="#F0F4FA">v2.0.3</text>
-  <text x="100" y="50.2" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" fill="#B9C8DF">2026-11-17</text>
+  <text x="37" y="50.2" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="700" fill="#F0F4FA">v3.0.0</text>
+  <text x="100" y="50.2" font-family="'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="12" fill="#B9C8DF">2026-11-28</text>
 </svg>
